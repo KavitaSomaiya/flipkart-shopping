@@ -40,7 +40,7 @@ function flipkartPostFunc(){
                   <div class='navbar-brand' href='#'>
                     <div class='d-flex align-items-center'>
                       <a href='#' title="${element.homeAndBack.homeTitle}" data-toggle="tooltip" onclick='openBackPageFunc();'><i class='fas fa-arrow-left ml-2 mr-3' aria-hidden='true'><!-- &#xf060; --></i></a>
-                      <a href='#' title="${element.homeAndBack.backTitle}" data-toggle="tooltip" onclick='openHomePageFunc();'><img class='rounded-circle' alt src='${element.faviconSrc}'></a>
+                      <a href='#' title="${element.homeAndBack.backTitle}" data-toggle="tooltip" onclick='openHomePageFunc();'><img class='rounded-circle' alt src='${element.images.faviconSrc}'></a>
                     </div>
                   </div>
           
@@ -273,7 +273,7 @@ function flipkartPostFunc(){
               </section>
 
               <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100'>
-                <div class='container-fluid' id='viewDetails'>
+                <div class='container-fluid' id='viewDetails' onclick='changeArrow(this);'>
                   <div class='row' type='button' data-toggle="collapse" data-target="#hiddenViewDetails" aria-expanded="false">
                     <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 cust-border-bottom'>
                       <div class='d-flex align-items-center py-3'>
@@ -281,7 +281,7 @@ function flipkartPostFunc(){
                           <p class='text-capitalize mb-0 pl-2'>View Details</p>
                         </div>
                         <div class='col'>
-                          <i class='material-icons float-right'>&#xe315;</i>
+                          <i class='material-icons float-right arrowClass'>&#xe315;</i>
                         </div>
                       </div>
                     </div>
@@ -324,7 +324,7 @@ function flipkartPostFunc(){
 
 
                 <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100'>
-                    <div class='container-fluid' id='allDetails'>
+                    <div class='container-fluid' id='allDetails' onclick='changeArrow2(this);'>
                       <div class='row' type='button' data-toggle="collapse" data-target="#hiddenAllDetails" aria-expanded="false">
                         <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 cust-border-bottom'>
                           
@@ -333,7 +333,7 @@ function flipkartPostFunc(){
                               <p class='text-capitalize mb-0 pl-2'>All Details</p>
                             </div>
                             <div class='col'>
-                              <i class='material-icons float-right'>&#xe315;</i>
+                              <i class='material-icons float-right' id='arrowId'>&#xe315;</i>
                             </div>
                           
                           </div>
@@ -548,16 +548,50 @@ function flipkartPostFunc(){
 
 
 
+
+function showDownArrow() {
+  document.querySelector('.arrowClass').innerHTML = '&#xe313;';
+}
+function showUpArrow() {
+  document.querySelector('.arrowClass').innerHTML = '&#xe315;';
+}
+function changeArrow(x) {
+  if(x.classList.contains("change")){
+    showUpArrow();
+     x.classList.remove("change");
+
+  }else{
+    showDownArrow();
+     x.classList.add("change");
+  }
+}
+
+
+function showDownArrow2() {
+  document.querySelector('#arrowId').innerHTML = '&#xe313;';
+}
+function showUpArrow2(){
+  document.querySelector('#arrowId').innerHTML = '&#xe315;';
+}
+function changeArrow2(x) {
+  if(x.classList.contains("change")){
+    showUpArrow2();
+     x.classList.remove("change");
+
+  }else{
+    showDownArrow2();
+     x.classList.add("change");
+  }
+}
+
+
+//https://stackoverflow.com/questions/47175281/how-to-change-content-of-i-classmaterial-icons-as-it-was-a-p
 function showImage(imgPath) {
   var curImage = document.querySelector('#currentImg');  
   curImage.src = imgPath; 
 }
 
 
-
-
-
-   
 
 function heartFunc() {
     document.querySelector('#heartId').classList.toggle('heartClassRed');
