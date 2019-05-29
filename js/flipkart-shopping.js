@@ -273,7 +273,7 @@ function flipkartPostFunc(){
               </section>
 
               <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100'>
-                <div class='container-fluid' id='viewDetails' onclick='changeArrow(this);'>
+                <div class='container-fluid showClass' id='viewDetails' onclick='changeArrow();'>
                   <div class='row' type='button' data-toggle="collapse" data-target="#hiddenViewDetails" aria-expanded="false">
                     <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 cust-border-bottom'>
                       <div class='d-flex align-items-center py-3'>
@@ -281,7 +281,7 @@ function flipkartPostFunc(){
                           <p class='text-capitalize mb-0 pl-2'>View Details</p>
                         </div>
                         <div class='col'>
-                          <i class='material-icons float-right arrowClass'>&#xe315;</i>
+                        <i class='fa fa-angle-right float-right' id='arrowIdOne'></i>
                         </div>
                       </div>
                     </div>
@@ -324,7 +324,7 @@ function flipkartPostFunc(){
 
 
                 <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100'>
-                    <div class='container-fluid' id='allDetails' onclick='changeArrow2(this);'>
+                    <div class='container-fluid showClass' id='allDetails' onclick='changeArrow2(this);'>
                       <div class='row' type='button' data-toggle="collapse" data-target="#hiddenAllDetails" aria-expanded="false">
                         <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 cust-border-bottom'>
                           
@@ -333,7 +333,7 @@ function flipkartPostFunc(){
                               <p class='text-capitalize mb-0 pl-2'>All Details</p>
                             </div>
                             <div class='col'>
-                              <i class='material-icons float-right' id='arrowId'>&#xe315;</i>
+                              <i class='fa fa-angle-right float-right' id='arrowId'></i>
                             </div>
                           
                           </div>
@@ -538,6 +538,21 @@ function flipkartPostFunc(){
           </main>
 
 
+          <!--
+
+          function changeArrow(x) {
+            if(x.classList.contains("change")){
+              showUpArrow();
+               x.classList.remove("change");
+          
+            }else{
+              showDownArrow();
+               x.classList.add("change");
+            }
+          }
+
+          -->
+
 
         `
     });
@@ -549,41 +564,47 @@ function flipkartPostFunc(){
 
 
 
-function showDownArrow() {
-  document.querySelector('.arrowClass').innerHTML = '&#xe313;';
-}
-function showUpArrow() {
-  document.querySelector('.arrowClass').innerHTML = '&#xe315;';
-}
-function changeArrow(x) {
-  if(x.classList.contains("change")){
-    showUpArrow();
-     x.classList.remove("change");
+//function showDownArrow() {
+  //document.querySelector('.arrowClass').innerHTML = '&#xe313;';
+//}
+//function showUpArrow() {
+  //document.querySelector('.arrowClass').innerHTML = '&#xe315;';
+//}
 
-  }else{
-    showDownArrow();
-     x.classList.add("change");
+
+ 
+function changeArrow() {
+  const viewDetails = document.querySelector('#viewDetails');
+  const icon = viewDetails.querySelector('#arrowIdOne');
+  if (icon.classList.contains('fa-angle-right')) {
+    icon.classList.remove('fa-angle-right');
+    icon.classList.add('fa-angle-down');
+    text.innerHTML = 'Hide';
+  } else {
+    icon.classList.remove('fa-angle-down');
+    icon.classList.add('fa-angle-right');
+    text.innerHTML = 'Show';
   }
 }
 
 
-function showDownArrow2() {
-  document.querySelector('#arrowId').innerHTML = '&#xe313;';
-}
-function showUpArrow2(){
-  document.querySelector('#arrowId').innerHTML = '&#xe315;';
-}
-function changeArrow2(x) {
-  if(x.classList.contains("change")){
-    showUpArrow2();
-     x.classList.remove("change");
-
-  }else{
-    showDownArrow2();
-     x.classList.add("change");
+function changeArrow2() {
+  const viewDetails = document.querySelector('#allDetails');
+  const icon = viewDetails.querySelector('#arrowId');
+  if (icon.classList.contains('fa-angle-right')) {
+    icon.classList.remove('fa-angle-right');
+    icon.classList.add('fa-angle-down');
+    text.innerHTML = 'Hide';
+  } else {
+    icon.classList.remove('fa-angle-down');
+    icon.classList.add('fa-angle-right');
+    text.innerHTML = 'Show';
   }
 }
 
+
+
+//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol
 
 //https://stackoverflow.com/questions/47175281/how-to-change-content-of-i-classmaterial-icons-as-it-was-a-p
 function showImage(imgPath) {

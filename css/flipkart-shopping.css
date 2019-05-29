@@ -497,7 +497,7 @@ header .row{
     -webkit-appearance: none;
     cursor: pointer
 }
-#viewDetails p, #viewDetails .material-icons{
+#viewDetails p {
     font-weight: 400;
     letter-spacing: 0.55px;
 }
