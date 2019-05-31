@@ -45,9 +45,28 @@ function flipkartPostFunc(){
                   </div>
           
                   <button class='navbar-toggler border-0' type='button'>
-                    <a class='mr-3' href='#' title="Search" data-toggle="tooltip">
+                    <a class='mr-3' href='#' onclick='searchFunc();' title='Search' data-toggle="tooltip">
                       <i class='fas fa-search text-white' aria-hidden='true'><!-- &#xf002; --></i>
+                      
                     </a>
+                    <input class="search form-control d-none" id='searchId' type="text" name="search" placeholder="Search...">
+                    
+
+                    
+                    
+                    
+                    <!-- <div class="search-form-wrapper">
+                      <form class="search-form" id="" action="">
+                        <div class="input-group">
+                          <input type="text" name="search" class="search form-control" placeholder="Search" />
+                          <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i>
+                          </span>
+                          <span class="input-group-addon search-close" id="basic-addon2"><i class="fa fa-window-close" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </form>
+                    </div> -->
+
                     <a class='ml-2' href='#' title="View Your Cart" data-toggle="tooltip">
                       <i class='fas fa-cart-plus text-white pl-0 px-0 mx-0' aria-hidden='true'>
                         <!-- &#xf217;	-->
@@ -562,17 +581,6 @@ function flipkartPostFunc(){
 
 
 
-
-
-//function showDownArrow() {
-  //document.querySelector('.arrowClass').innerHTML = '&#xe313;';
-//}
-//function showUpArrow() {
-  //document.querySelector('.arrowClass').innerHTML = '&#xe315;';
-//}
-
-
- 
 function changeArrow() {
   const viewDetails = document.querySelector('#viewDetails');
   const icon = viewDetails.querySelector('#arrowIdOne');
@@ -635,4 +643,11 @@ function openHomePageFunc() {
 function openIndexPageFunc() {
     window.open('./index.html','_self','scrollbars=yes,menubar=yes');
     return false;
+}
+
+
+
+
+function searchFunc() {
+  document.querySelector('#searchId').classList.toggle('d-block');
 }
