@@ -47,9 +47,8 @@ function flipkartPostFunc(){
                   <button class='navbar-toggler border-0' type='button'>
                     <a class='mr-3' href='#' onclick='searchFunc();' title='Search' data-toggle="tooltip">
                       <i class='fas fa-search text-white' aria-hidden='true'><!-- &#xf002; --></i>
-                      
                     </a>
-                    <input class="search form-control d-none" id='searchId' type="text" name="search" placeholder="Search...">
+                    <input class="search form-control d-none" id='searchId' type="text" name="search" placeholder="Search..." />
                     
 
                     
@@ -135,7 +134,7 @@ function flipkartPostFunc(){
                 </div>
         <div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4' onclick='heartFunc();' type='button'>
             <div class='rounded-circle shadow-lg mainImgSectionHeart'>
-              <i class='fa fa-heart p-3 heartClassFontSize heartClassGray' id='heartId' aria-hidden='true'></i>
+              <i class='fa fa-heart p-3 heartClassFontSize heartClassGray heartClass' aria-hidden='true'></i>
             </div>
           </div>
         </div>
@@ -623,7 +622,7 @@ function showImage(imgPath) {
 
 
 function heartFunc() {
-    document.querySelector('#heartId').classList.toggle('heartClassRed');
+    document.querySelector('.heartClass').classList.toggle('heartClassRed');
 }
 
 function cartQtyFunc() {
