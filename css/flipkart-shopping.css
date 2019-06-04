@@ -241,9 +241,11 @@ header .row{
 .heartClassGray {
     color: #A1A1A1
 }
-.heartClassRed{
+
+.heartClassRed {
     color: #B81010
 }
+
 .img-grid-ul{
     display: -ms-flexbox!important;
     display: -webkit-flex!important;
@@ -292,7 +294,11 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){.img-grid-ul li a img{height: 144px;}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){.img-grid-ul li a img{height: 144px;}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){.img-grid-ul li a img{height: 150px;}}
+
 
 
 #productDetails a i, #productDetails a p{
@@ -321,9 +327,11 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){
-    #productDetails a p,#productDetails a i{font-size: 41.5px}
-}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#productDetails a p,#productDetails a i{font-size: 41.5px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){#productDetails a p,#productDetails a i{font-size: 43px}}
+
 
 /* -------------- PRODUCT DESCRIPTION -----------------------------------------*/
 
@@ -359,7 +367,11 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){#productDesc h1,#productDesc h1 span a{font-size: 33.5px}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#productDesc h1,#productDesc h1 span a{font-size: 33.5px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){#productDesc h1,#productDesc h1 span a{font-size: 35px}}
+
 
 
 
@@ -408,13 +420,15 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){#emiProductExchange p{font-size: 30px}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#emiProductExchange p{font-size: 30px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){#emiProductExchange p{font-size: 32px}}
+
 
 
 
 /* ----------- addToCartBuyNow ----------------------------------------------------------------------*/
-
-
 
 #addToCartBuyNow p{
     color: #FF5252;
@@ -437,7 +451,11 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){#addToCartBuyNow p{font-size:46px}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#addToCartBuyNow p{font-size:46px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){#addToCartBuyNow p{font-size:46.888px}}
+
 
 #addToCartBuyNow button{
     border: 1px solid #fb641b;
@@ -467,7 +485,12 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){#addToCartBuyNow button{font-size: 26px;padding: 10px 220px;height: 82px}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#addToCartBuyNow button{font-size: 26px;padding: 10px 220px;height: 82px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){#shareSection i, #shareSection p{font-size: 24px}}
+
+
 
 /* ------------ SHARE ----------------------------------------------------------------------*/
 #shareSection{
@@ -493,7 +516,11 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){#shareSection i, #shareSection p{font-size: 20px}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#shareSection i, #shareSection p{font-size: 20px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){#shareSection i, #shareSection p{font-size: 22px}}
+
 
 /* ------------- viewDetails --------------------------------------------------------------------*/
 #viewDetails  [type=button] {
@@ -520,7 +547,11 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){#viewDetails p, #viewDetails .material-icons{font-size: 23px}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#viewDetails p, #viewDetails .material-icons{font-size: 23px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){#viewDetails p, #viewDetails .material-icons{font-size: 25px}}
+
 
 #hiddenViewDetails h4{
     padding-bottom:5.5px
@@ -552,7 +583,11 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){#hiddenViewDetails h4{font-size: 18px}#hiddenViewDetails ul li p{font-size: 16px}#hiddenViewDetails .flipkart-plus-img img{width: auto}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#hiddenViewDetails h4{font-size: 18px}#hiddenViewDetails ul li p{font-size: 16px}#hiddenViewDetails .flipkart-plus-img img{width: auto}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){#hiddenViewDetails h4{font-size: 20px}#hiddenViewDetails ul li p{font-size: 17px}#hiddenViewDetails .flipkart-plus-img img{width: auto}}
+
 
 /*------------ ALL DETAILS ----------------------------------------------------------------------------------*/
 
@@ -586,7 +621,12 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){#allDetails p, #allDetails .material-icons{font-size: 23px}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#allDetails p, #allDetails .material-icons{font-size: 23px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){#allDetails p, #allDetails .material-icons{font-size: 24.888px}}
+
+
 
 
 #hiddenAllDetails h3{
@@ -636,7 +676,12 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){#hiddenAllDetails p{font-size: 14.999px}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#hiddenAllDetails p{font-size: 14.999px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){#hiddenAllDetails p{font-size: 15.999px}}
+
+
 
 #hiddenAllDetails h4{
     color: #212121;
@@ -689,7 +734,11 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){.cust-table table td{font-size: 14.999px}.cust-table td:first-child{width: 17%;}.cust-table td:last-child{width: 83%;}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){.cust-table table td{font-size: 14.999px}.cust-table td:first-child{width: 17%;}.cust-table td:last-child{width: 83%;}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){.cust-table table td{font-size: 15.999px}.cust-table td:first-child{width: 19%;}.cust-table td:last-child{width: 85%;}}
+
 
 
 #hiddenAllDetails li p{
@@ -739,7 +788,11 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){.search{width:210px}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){.search{width:210px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){.search{width:224px}}
+
 
 
 /* ------------ BACK.HTML ------------------------------------------------------------------------------------*/
@@ -770,36 +823,44 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){.searchTwo{width:210px; right: 248px}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){.searchTwo{width:210px; right: 248px}}
 
-#sortFilterSection p {
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){.searchTwo{width:220px; right: 254px}}
+
+
+.sortFilterSection p {
     font-weight: 600;
     letter-spacing: 0.766px;
 }
 /*------------------ XS / MOBILE PORTRAIT ---------------------*/ 
-@media only screen and (min-width: 0px) and (max-width: 575.98px){#sortFilterSection i{font-size: 14.5px}#sortFilterSection p{font-size: 14.5px}}
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.sortFilterSection i{font-size: 14.5px}.sortFilterSection p{font-size: 14.5px}}
 
 /*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
-@media only screen and (min-width: 576px) and (max-width: 767.98px){#sortFilterSection i{font-size: 16.5px}#sortFilterSection p{font-size: 16.5px}}
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.sortFilterSection i{font-size: 16.5px}.sortFilterSection p{font-size: 16.5px}}
 
 
 /*------------------ MD / TABLETS PORTRAIT ----------------------------*/
-@media only screen and (min-width: 768px) and (max-width: 991.98px){#sortFilterSection i{font-size: 20.5px}#sortFilterSection p{font-size: 21px}}
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.sortFilterSection i{font-size: 20.5px}.sortFilterSection p{font-size: 21px}}
 
 
 /*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 992px) and (max-width: 1199.98px){#sortFilterSection i{font-size: 22.5px}#sortFilterSection p{font-size: 23px}}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.sortFilterSection i{font-size: 22.5px}.sortFilterSection p{font-size: 23px}}
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){#sortFilterSection i{font-size: 24.5px}#sortFilterSection p{font-size: 25px}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){.sortFilterSection i{font-size: 24.5px}.sortFilterSection p{font-size: 25px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){.sortFilterSection i{font-size: 25.5px}.sortFilterSection p{font-size: 26px}}
+
 
 #backHtmlCreditCardScheme p{
     font-weight: 500;
     font-size: 16.5px
 }
 
-#sortFilterSection  [type=button] {
+.sortFilterSection  [type=button] {
     -webkit-appearance: none;
     cursor: pointer
 }
@@ -811,6 +872,7 @@ header .row{
 #backHtmlImg .backHtmlImgClass {
     position: relative
 }
+
 /*------------------ XS / MOBILE PORTRAIT ---------------------*/ 
 @media only screen and (min-width: 0px) and (max-width: 575.98px){#backHtmlImg .backHtmlImgClass{height: 90px}}
 
@@ -827,7 +889,12 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){#backHtmlImg .backHtmlImgClass{height: 220px}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#backHtmlImg .backHtmlImgClass{height: 220px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){#backHtmlImg .backHtmlImgClass{height: 244px}}
+
+
 
 #backHtmlImg .backHtmlImgClass img{
     position: absolute;
@@ -896,8 +963,9 @@ header .row{
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px){#productDesc2 h1,#productDesc2 h1 span a, #productDesc2 p, #productDesc2 p span, #productDesc2 p del{font-size: 33.5px}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){#productDesc2 h1,#productDesc2 h1 span a, #productDesc2 p, #productDesc2 p span, #productDesc2 p del{font-size: 33.5px}}
 
-
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (max-width: 1500px){#productDesc2 h1,#productDesc2 h1 span a, #productDesc2 p, #productDesc2 p span, #productDesc2 p del{font-size: 34.788px}}
 
 

@@ -621,8 +621,33 @@ function showImage(imgPath) {
 
 
 
-function heartFunc() {
-    document.querySelector('.heartClass').classList.toggle('heartClassRed');
+//function heartFunc() {
+//    document.querySelector('.heartClass').classList.toggle('heartClassRed');
+
+
+const listOfThings = document.querySelector('#heartUlId');
+
+// Add event listener 
+listOfThings.addEventListener("click", function(event) {
+  // Grab all the li elements
+  let list = document.querySelectorAll('#heartUlId>li>section>div>div>div>i');
+  for (let j = 0; j < list.length; j++) {
+    if (event.target.dataset.id === list[j].dataset.id) {
+      if (event.target.className === 'heartClassGray') {
+        event.target.className = 'heartClassRed'
+      } else {
+        event.target.className = 'heartClassGray'
+      }
+    } else {
+      list[j].className = 'heartClassGray'
+    }
+  }
+})
+
+//https://stackoverflow.com/questions/51494927/toggle-the-class-of-unordered-list-items-using-simple-javascript
+//} 
+function heartFuncTwo() {
+  toggleClass('heartClassRed');
 }
 
 function cartQtyFunc() {
