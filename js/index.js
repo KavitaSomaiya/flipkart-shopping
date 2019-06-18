@@ -1,150 +1,172 @@
-<!doctype html>
-<html lang='en'>
-  <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no'>
-    <link rel='shortcut icon' type='image/x-icon' href='./images/flipkart-favicon.ico' sizes='32x32' />
-    <title>Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp; More. Best Offers!</title>
-    <!-- <link href='http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css' rel='stylesheet' /> -->
-    <link href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' rel='stylesheet' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous' />
-    <style>
-      /* font-family: 'Roboto', sans-serif; */
-      @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-      /* font-family: 'Roboto Slab', serif; */
-      @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
-      @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+
+function flipkartPostFunc(){
+  
+  var flipkartPost = [
+    {
+      homeAndBack: {
+        homeTitle: 'Back',
+        backTitle: 'Home'
+      },
+      images: {
+        faviconSrc: 'images/flipkart-favicon.ico',
+        img1: 'images/mob-img-1.jpeg',
+        img2: 'images/mob-img-2.jpeg',
+        img3: 'images/mob-img-3.jpeg',
+        img4: 'images/mob-img-4.jpeg',
+        AssuredImgSrc: 'images/fa_8b4b59.png',
+        schemeIconSrc: 'images/scheme-icon.png',
+        plusPicSrc: './images/flipkart-plus-picture.png'
+      },
+      ratingsAndReview: {
+        ratings: '69,458',
+        ratingPercentage: '4.6',
+        reviews: '7,914'
+      }
+    }
+  ],
+  flipkartStrng=''
+  
+  flipkartPost.forEach(element => {
+    flipkartStrng =
+    
+      `
       
-
-    </style>
-    <!-- Bootstrap CSS --> 
-    <link rel='stylesheet' href='./css/bootstrap.min.css' />
-    <link rel='stylesheet' href='./css/animate.css' />
-    <link rel='stylesheet' href='./css/index.css' />
-
-  </head>
-
-  
-  <body onload='flipkartPostFunc();' id='flipkartPostId' cz-shortcut-listen='true'>
-
-
-  <!-- <header class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100'>
-    <div class='container-fluid'>
-      <div class='row no-gutters'>
-      <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12'>
-        <nav class='navbar navbar-toggleable-sm navbar-toggleable-md navbar-toggleable-lg navbar-toggleable-xl navbar-light' role='navigation'>
-          <div class='navbar-brand' href='#'>
-            <div class='d-flex align-items-center'>
-              <a href='#' title="Back" data-toggle="tooltip" onclick='openBackPageFunc();'><i class='fas fa-arrow-left ml-2 mr-3' aria-hidden='true'></i></a>
-              <a href='#' title="Home" data-toggle="tooltip" onclick='openHomePageFunc();'><img class='rounded-circle' alt src='./images/flipkart-favicon.ico'></a>
-            </div>
-          </div>
+        <header class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100'>
+          <div class='container-fluid'>
+            <div class='row no-gutters'>
+              <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12'>
+                <nav class='navbar navbar-toggleable-sm navbar-toggleable-md navbar-toggleable-lg navbar-toggleable-xl navbar-light' role='navigation'>
+                  <div class='navbar-brand' href='#'>
+                    <div class='d-flex align-items-center'>
+                      <a href='#' title="${element.homeAndBack.homeTitle}" data-toggle="tooltip" onclick='openBackPageFunc();'><i class='fas fa-arrow-left ml-2 mr-3' aria-hidden='true'><!-- &#xf060; --></i></a>
+                      <a href='#' title="${element.homeAndBack.backTitle}" data-toggle="tooltip" onclick='openHomePageFunc();'><img class='rounded-circle' alt src='${element.images.faviconSrc}'></a>
+                    </div>
+                  </div>
           
-          <button class='navbar-toggler border-0' type='button'>
-            <a class='mr-3' href='#' title="Search" data-toggle="tooltip">
-              <i class='fas fa-search text-white' aria-hidden='true'></i>
-            </a>
-            <a class='ml-2' href='#' title="View Your Cart" data-toggle="tooltip">
-              <i class='fas fa-cart-plus text-white pl-0 px-0 mx-0' aria-hidden='true'>
-                
-                <span class='badge badge-pill badge-cart-notify' id='cartQty'>0</span>
-              </i>
-            </a>
-            <a class='ml-3 ml-1' href='#' title="My Account" data-toggle="tooltip">
-              <i class='fas fa-user text-white' aria-hidden='true'>
-                
-                <i class='badge badge-pill badge-check-notify fa fa-check text-white' aria-hidden='true'></i>
-              </i>
-            </a>
-            <span class='navbar-toggler-icon' id='navbar-toggle-icon-id' data-toggle='collapse' data-target='#collapsibleNavbar'></span>
-          </button>
+                  <button class='navbar-toggler border-0' type='button'>
+                    <a class='mr-3' href='#' onclick='searchFunc();' title='Search' data-toggle="tooltip">
+                      <i class='fas fa-search text-white' aria-hidden='true'><!-- &#xf002; --></i>
+                    </a>
+                    <input class="search form-control d-none" id='searchId' type="text" name="search" placeholder="Search..." />
+                    
+
+                    
+                    
+                    
+                    <!-- <div class="search-form-wrapper">
+                      <form class="search-form" id="" action="">
+                        <div class="input-group">
+                          <input type="text" name="search" class="search form-control" placeholder="Search" />
+                          <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i>
+                          </span>
+                          <span class="input-group-addon search-close" id="basic-addon2"><i class="fa fa-window-close" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </form>
+                    </div> -->
+
+                    <a class='ml-2' href='#' title="View Your Cart" data-toggle="tooltip">
+                      <i class='fas fa-cart-plus text-white pl-0 px-0 mx-0' aria-hidden='true'>
+                        <!-- &#xf217;	-->
+                        <span class='badge badge-pill badge-cart-notify' id='cartQty'>0</span>
+                      </i>
+                    </a>
+                    <a class='ml-3 ml-1' href='#' title="My Account" data-toggle="tooltip">
+                      <i class='fas fa-user text-white' aria-hidden='true'>
+                        <!-- &#&#xf007;	-->
+                        <i class='badge badge-pill badge-check-notify fa fa-check text-white' aria-hidden='true'> <!-- &#xf00c; --> </i>
+                      </i>
+                    </a>
+                    <span class='navbar-toggler-icon' id='navbar-toggle-icon-id' data-toggle='collapse' data-target='#collapsibleNavbar'></span>
+                  </button>
           
-          <div class='collapse navbar-collapse' id='collapsibleNavbar'>
-            <ul class='nav navbar-nav'>
-              <li class='nav-item'>
-                <a class='nav-link' href='#'>Electronics</a>
-              </li>
-              <li class='nav-item'>
-                <a class='nav-link' href='#'>TVs & Appliances</a>
-              </li>
-              <li class='nav-item'>
-                <a class='nav-link' href='#'>Men</a>
-              </li>
-              <li class='nav-item'>
-                <a class='nav-link' href='#'>Women</a>
-              </li>
-              <li class='nav-item'>
-                <a class='nav-link' href='#'>Baby & Kids</a>
-              </li>    
-              <li class='nav-item'>
-                <a class='nav-link' href='#'>Home & Furniture</a>
-              </li>
-              <li class='nav-item'>
-                <a class='nav-link' href='#'>Sports, Books & More</a>
-              </li>
-              <li class='nav-item'>
-                <a class='nav-link' href='#'>Offer Zone</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-      </div>
-    </div>
-  </header>
-  
-  
-  
-  <main>
-    <article>
-      <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100' id='mainImgSection'>
-        <div class="container-fluid">
-        <div class='row no-gutters mt-5 pt-3'>
-          <div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4'>
-            <div class='mainImgSectionP'>
-              <p class>On offer</p>
+                  <div class='collapse navbar-collapse' id='collapsibleNavbar'>
+                    <ul class='nav navbar-nav'>
+                      <li class='nav-item'>
+                        <a class='nav-link' href='#'>Electronics</a>
+                      </li>
+                      <li class='nav-item'>
+                        <a class='nav-link' href='#'>TVs & Appliances</a>
+                      </li>
+                      <li class='nav-item'>
+                        <a class='nav-link' href='#'>Men</a>
+                      </li>
+                      <li class='nav-item'>
+                        <a class='nav-link' href='#'>Women</a>
+                      </li>
+                      <li class='nav-item'>
+                        <a class='nav-link' href='#'>Baby & Kids</a>
+                      </li>    
+                      <li class='nav-item'>
+                        <a class='nav-link' href='#'>Home & Furniture</a>
+                      </li>
+                      <li class='nav-item'>
+                        <a class='nav-link' href='#'>Sports, Books & More</a>
+                      </li>
+                      <li class='nav-item'>
+                        <a class='nav-link' href='#'>Offer Zone</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
             </div>
           </div>
-          <div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4'>
-            <div class='mainImgSectionImage'>
-              <img class alt src='./images/mob-img-1.jpeg' />
-            </div>
-          </div>
+        </header>
+  
+  
+  
+        <main>
+          <article>
+            <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100' id='mainImgSection'>
+              <div class="container-fluid">
+                <div class='row no-gutters mt-5 pt-3'>
+                  <div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4'>
+                    <div class='mainImgSectionP'>
+                      <p class>On offer</p>
+                    </div>
+                  </div>
+                  <div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4'>
+                    <div class='mainImgSectionImage'>
+                      <img class id='currentImg' alt src='${element.images.img1}' />
+                  </div>
+                </div>
         <div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4' onclick='heartFunc();' type='button'>
             <div class='rounded-circle shadow-lg mainImgSectionHeart'>
-              <i class='fa fa-heart p-3 heartClassFontSize heartClassGray' id='heartId' aria-hidden='true'></i>
+              <i class='fa fa-heart p-3 heartClassFontSize heartClassGray heartClass' aria-hidden='true'></i>
             </div>
           </div>
         </div>
         </div>
       </section>
 
-
-
+      
       <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100'>
           <div class="container-fluid">
             <div class='row mt-3 pt-3'>
               <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12'>
                 <div class='row no-gutters mx-auto'>
                   <div class='col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 p-0 m-0'>
-                    <ul class='img-grid-ul'>
-                      <li class='ml-0 mr-1 mr-sm-1 mr-md-1 mr-lg-2 mr-xl-2'>
+                    <ul class='img-grid-ul' id='imgGridUl'>
+                      <li class='ml-0 mr-1 mr-sm-1 mr-md-1 mr-lg-2 mr-xl-2' onclick='showImage("${element.images.img1}");'>
                         <a class='p-2 p-sm-2 p-md-3 p-lg-3 p-xl-3' href='#'>
-                          <img alt src='images/mob-img-1.jpeg' />
+                          <img alt src='${element.images.img1}' />
                         </a>
                       </li>
-                      <li class='mx-1 mx-sm-1 mx-md-1 mx-lg-2 mx-xl-2'>
+                      <li class='mx-1 mx-sm-1 mx-md-1 mx-lg-2 mx-xl-2' onclick='showImage("${element.images.img2}");'>
                         <a class='p-2 p-sm-2 p-md-3 p-lg-3 p-xl-3' href='#'>
-                          <img alt src='images/mob-img-2.jpeg' />
+                          <img alt src='${element.images.img2}' />
                         </a>
                       </li>
-                      <li class='mx-1 mx-sm-1 mx-md-1 mx-lg-2 mx-xl-2'>
+                      <li class='mx-1 mx-sm-1 mx-md-1 mx-lg-2 mx-xl-2' onclick='showImage("${element.images.img3}");'>
                         <a class='p-2 p-sm-2 p-md-3 p-lg-3 p-xl-3' href='#'>
-                          <img alt src='images/mob-img-3.jpeg'/>
+                          <img alt src='${element.images.img3}'/>
                         </a>
                       </li>
-                      <li class='ml-1 ml-sm-1 ml-md-1 ml-lg-2 ml-xl-2 mr-0'>
+                      <li class='ml-1 ml-sm-1 ml-md-1 ml-lg-2 ml-xl-2 mr-0' onclick='showImage("${element.images.img4}");'>
                         <a class='p-2 p-sm-2 p-md-3 p-lg-3 p-xl-3' href='#'>
-                          <img alt src='images/mob-img-4.jpeg' />
+                          <img alt src='${element.images.img4}' />
                         </a>
                       </li>
                     </ul>
@@ -165,7 +187,7 @@
             </div>
           </section>
 
-
+          
           <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100'>
             <div class='container-fluid'>
               <div class='row mt-4 pt-2'>
@@ -177,17 +199,17 @@
                       </h1>
                       <div class='d-flex' id='ratings'>
                         <div class='bg-success h-25 rounded justify-content-center align-items-center px-2 py-1 mr-4 w-auto d-flex'>
-                          <p class='mb-0 text-white mr-1'>4.6</p>
-                          <i class='fa fa-star text-white' aria-hidden='true'></i>
+                          <p class='mb-0 text-white mr-1'>${element.ratingsAndReview.ratingPercentage}</p>
+                          <i class='fa fa-star text-white' aria-hidden='true'><!-- &#xf005; --></i>
                         </div>
                         <div class='inline-block' id='reviews'>
                             <p class='mr-4 text-secondary font-weight-bold align-middle'>
-                                69,458 Ratings & 7,914 Reviews
+                                ${element.ratingsAndReview.ratings} Ratings & ${element.ratingsAndReview.reviews} Reviews
                               <i class='material-icons align-middle text-secondary'>&#xe315;</i>
                             </p>
                         </div>
                         
-                          <img class alt src='images/fa_8b4b59.png' width='auto' height='24px;' />
+                          <img class alt src='${element.images.AssuredImgSrc}' width='auto' height='24px;' />
                           
                       </div>
                       <p class='text-success font-weight-bold mt-3'>Extra ₹2000 discount</p>
@@ -201,7 +223,7 @@
                         </del>
                       </p>
                       <div class='d-inline-flex align-items-bottom' id='creditCardScheme'>
-                        <img class='mr-1' height='18' width='18' alt src='images/scheme-icon.png' /> 
+                        <img class='mr-1' height='18' width='18' alt src='${element.images.schemeIconSrc}' /> 
                         <p class=''>Extra 5% off with Axis Bank Buzz Credit Card</p>
                         <i class='material-icons text-secondary' style='font-size: 19.5px;'>&#xe315;</i>
                       </div>
@@ -237,7 +259,7 @@
                     <div class='d-flex align-items-center'>
                       <div class='col p-0 m-0'>
                         
-                        <button class='btn btn-lg rounded-0 float-left' type='button'>Add to Cart</button>
+                        <button class='btn btn-lg rounded-0 float-left' type='button' onclick='cartQtyFunc();'>Add to Cart</button>
 
                         
                       </div>
@@ -269,7 +291,7 @@
               </section>
 
               <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100'>
-                <div class='container-fluid' id='viewDetails'>
+                <div class='container-fluid showClass' id='viewDetails' onclick='changeArrow();'>
                   <div class='row' type='button' data-toggle="collapse" data-target="#hiddenViewDetails" aria-expanded="false">
                     <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 cust-border-bottom'>
                       <div class='d-flex align-items-center py-3'>
@@ -277,7 +299,7 @@
                           <p class='text-capitalize mb-0 pl-2'>View Details</p>
                         </div>
                         <div class='col'>
-                          <i class='material-icons float-right'>&#xe315;</i>
+                        <i class='fa fa-angle-right float-right' id='arrowIdOne'></i>
                         </div>
                       </div>
                     </div>
@@ -309,7 +331,7 @@
                           </div>
                         </div>
                         <div class='row w-100 mw-100 justify-content-center mb-5 mx-auto flipkart-plus-img'>
-                          <img class='mw-100 h-auto' alt src='./images/flipkart-plus-picture.png' />
+                          <img class='mw-100 h-auto' alt src='${element.images.plusPicSrc}' />
                         </div>
                       </div>
                     </div>
@@ -320,7 +342,7 @@
 
 
                 <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100'>
-                    <div class='container-fluid' id='allDetails'>
+                    <div class='container-fluid showClass' id='allDetails' onclick='changeArrow2(this);'>
                       <div class='row' type='button' data-toggle="collapse" data-target="#hiddenAllDetails" aria-expanded="false">
                         <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 cust-border-bottom'>
                           
@@ -329,7 +351,7 @@
                               <p class='text-capitalize mb-0 pl-2'>All Details</p>
                             </div>
                             <div class='col'>
-                              <i class='material-icons float-right'>&#xe315;</i>
+                              <i class='fa fa-angle-right float-right' id='arrowId'></i>
                             </div>
                           
                           </div>
@@ -530,16 +552,129 @@
                   </section>
 
       
-    </article>
-  </main> -->
-  
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src='./js/index.js'></script>
-    <script src='./js/back.js'></script>
-    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
-    <script src='./js/bootstrap.min.js' ></script>
+            </article>
+          </main>
 
-  </body>
-</html>
+
+          <!--
+
+          function changeArrow(x) {
+            if(x.classList.contains("change")){
+              showUpArrow();
+               x.classList.remove("change");
+          
+            }else{
+              showDownArrow();
+               x.classList.add("change");
+            }
+          }
+
+
+
+          const listOfThings = document.querySelector('#heartUlId');
+
+// Add event listener 
+listOfThings.addEventListener("click", function(event) {
+  // Grab all the li elements
+  let list = document.querySelectorAll('#heartUlId>li>section>div>div>div>i');
+  for (let j = 0; j < list.length; j++) {
+    if (event.target.dataset.id === list[j].dataset.id) {
+      if (event.target.className === 'heartClassGray') {
+        event.target.className = 'heartClassRed'
+      } else {
+        event.target.className = 'heartClassGray'
+      }
+    } else {
+      list[j].className = 'heartClassGray'
+    }
+  }
+})  
+          -->
+
+
+        `
+    });
+    
+    document.querySelector('#flipkartPostId').innerHTML = flipkartStrng
+}
+
+
+
+function changeArrow() {
+  const viewDetails = document.querySelector('#viewDetails');
+  const icon = viewDetails.querySelector('#arrowIdOne');
+  if (icon.classList.contains('fa-angle-right')) {
+    icon.classList.remove('fa-angle-right');
+    icon.classList.add('fa-angle-down');
+    text.innerHTML = 'Hide';
+  } else {
+    icon.classList.remove('fa-angle-down');
+    icon.classList.add('fa-angle-right');
+    text.innerHTML = 'Show';
+  }
+}
+
+
+function changeArrow2() {
+  const viewDetails = document.querySelector('#allDetails');
+  const icon = viewDetails.querySelector('#arrowId');
+  if (icon.classList.contains('fa-angle-right')) {
+    icon.classList.remove('fa-angle-right');
+    icon.classList.add('fa-angle-down');
+    text.innerHTML = 'Hide';
+  } else {
+    icon.classList.remove('fa-angle-down');
+    icon.classList.add('fa-angle-right');
+    text.innerHTML = 'Show';
+  }
+}
+
+
+
+//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol
+
+//https://stackoverflow.com/questions/47175281/how-to-change-content-of-i-classmaterial-icons-as-it-was-a-p
+function showImage(imgPath) {
+  var curImage = document.querySelector('#currentImg');  
+  curImage.src = imgPath; 
+}
+
+
+
+//function heartFunc() {
+//    document.querySelector('.heartClass').classList.toggle('heartClassRed');
+
+
+
+
+//https://stackoverflow.com/questions/51494927/toggle-the-class-of-unordered-list-items-using-simple-javascript
+//} 
+function heartFuncTwo() {
+  toggleClass('heartClassRed');
+}
+
+function cartQtyFunc() {
+    var cartQty = parseInt(document.querySelector('#cartQty').textContent);
+    cartQty++;
+    document.querySelector('#cartQty').textContent = cartQty;
+}
+
+function openBackPageFunc() {
+    window.open('./back.html','_self','scrollbars=yes,menubar=yes');
+    return false;
+}
+function openHomePageFunc() {
+    window.open('./home-page.html','_self','scrollbars=yes,menubar=yes');
+    return false;
+}
+function openIndexPageFunc() {
+    window.open('./index.html','_self','scrollbars=yes,menubar=yes');
+    return false;
+}
+
+
+
+
+function searchFunc() {
+  document.querySelector('#searchId').classList.toggle('d-block');
+}
