@@ -568,25 +568,25 @@ header .row{
 }
 
 /*------------------ XS / MOBILE PORTRAIT ---------------------*/
-@media only screen and (min-width: 0px) and (max-width: 575.98px){#hiddenViewDetails h4{font-size: 11.5px}#hiddenViewDetails ul li p{font-size: 9px}#hiddenViewDetails .flipkart-plus-img img{width: 85%}}
+@media only screen and (min-width: 0px) and (max-width: 575.98px){#hiddenViewDetails h4{font-size: 11.5px}#hiddenViewDetails ul li p{font-size: 9px}#hiddenViewDetails .plus-img img{width: 85%}}
 
 /*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
-@media only screen and (min-width: 576px) and (max-width: 767.98px){#hiddenViewDetails h4{font-size: 14px}#hiddenViewDetails ul li p{font-size: 12px}#hiddenViewDetails .flipkart-plus-img img{width: 85%}}
+@media only screen and (min-width: 576px) and (max-width: 767.98px){#hiddenViewDetails h4{font-size: 14px}#hiddenViewDetails ul li p{font-size: 12px}#hiddenViewDetails .plus-img img{width: 85%}}
 
 
 /*------------------ MD / TABLETS PORTRAIT ----------------------------*/
-@media only screen and (min-width: 768px) and (max-width: 991.98px){#hiddenViewDetails h4{font-size: 16px}#hiddenViewDetails ul li p{font-size: 13px}#hiddenViewDetails .flipkart-plus-img img{width: auto}}
+@media only screen and (min-width: 768px) and (max-width: 991.98px){#hiddenViewDetails h4{font-size: 16px}#hiddenViewDetails ul li p{font-size: 13px}#hiddenViewDetails .plus-img img{width: auto}}
 
 
 /*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 992px) and (max-width: 1199.98px){#hiddenViewDetails h4{font-size: 17px}#hiddenViewDetails ul li p{font-size: 13.335px}#hiddenViewDetails .flipkart-plus-img img{width: auto}}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){#hiddenViewDetails h4{font-size: 17px}#hiddenViewDetails ul li p{font-size: 13.335px}#hiddenViewDetails .plus-img img{width: auto}}
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#hiddenViewDetails h4{font-size: 18px}#hiddenViewDetails ul li p{font-size: 16px}#hiddenViewDetails .flipkart-plus-img img{width: auto}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#hiddenViewDetails h4{font-size: 18px}#hiddenViewDetails ul li p{font-size: 16px}#hiddenViewDetails .plus-img img{width: auto}}
 
 /*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
-@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {#hiddenViewDetails h4{font-size: 20px}#hiddenViewDetails ul li p{font-size: 17px}#hiddenViewDetails .flipkart-plus-img img{width: auto}}
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {#hiddenViewDetails h4{font-size: 20px}#hiddenViewDetails ul li p{font-size: 17px}#hiddenViewDetails .plus-img img{width: auto}}
 
 
 /*------------ ALL DETAILS ----------------------------------------------------------------------------------*/

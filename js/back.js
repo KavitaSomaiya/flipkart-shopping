@@ -1,4 +1,4 @@
-
+﻿
 
 function backPageFunction() {
   var backPost = [
@@ -26,7 +26,7 @@ function backPageFunction() {
               <div class='navbar-brand' href='#'>
                 <div class='d-flex align-items-center'>
                   <a href='#' title="${element.homeAndBack.homeTitle}" data-toggle="tooltip" onclick='openBackPageFunc();'><i class='fas fa-arrow-left ml-2 mr-3' aria-hidden='true'><!-- &#xf060; --></i></a>
-                  <a href='#' title="${element.homeAndBack.backTitle}" data-toggle="tooltip" onclick='openHomePageFunc();'><img class='rounded-circle' alt src='./images/flipkart-favicon.ico'></a>
+                  <a href='#' title="${element.homeAndBack.backTitle}" data-toggle="tooltip" onclick='openHomePageFunc();'><img class='rounded-circle' alt src='./images/favicon.ico'></a>
                 </div>
               </div>
       
@@ -115,7 +115,7 @@ function backPageFunction() {
           </div>
         </section>
         
-        <ul class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100 list-unstyled' id='heartUlId'>
+        <ul class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100 list-unstyled' id='heartUlId' onload='dispImgFunc();'>
             
         </ul>
 

@@ -1,22 +1,22 @@
 
 
-function flipkartPostFunc(){
+function postFunc(){
   
-  var flipkartPost = [
+  var post = [
     {
       homeAndBack: {
         homeTitle: 'Back',
         backTitle: 'Home'
       },
       images: {
-        faviconSrc: 'images/flipkart-favicon.ico',
-        img1: 'images/mob-img-1.jpeg',
+        faviconSrc: 'images/favicon.ico',
+        img1: 'images/mob- (7).jpeg',
         img2: 'images/mob-img-2.jpeg',
         img3: 'images/mob-img-3.jpeg',
         img4: 'images/mob-img-4.jpeg',
         AssuredImgSrc: 'images/fa_8b4b59.png',
         schemeIconSrc: 'images/scheme-icon.png',
-        plusPicSrc: './images/flipkart-plus-picture.png'
+        plusPicSrc: './images/plus-picture.png'
       },
       ratingsAndReview: {
         ratings: '69,458',
@@ -25,10 +25,10 @@ function flipkartPostFunc(){
       }
     }
   ],
-  flipkartStrng=''
+  postString=''
   
-  flipkartPost.forEach(element => {
-    flipkartStrng =
+  post.forEach(element => {
+    postString =
     
       `
       
@@ -330,7 +330,7 @@ function flipkartPostFunc(){
                             </div>
                           </div>
                         </div>
-                        <div class='row w-100 mw-100 justify-content-center mb-5 mx-auto flipkart-plus-img'>
+                        <div class='row w-100 mw-100 justify-content-center mb-5 mx-auto plus-img'>
                           <img class='mw-100 h-auto' alt src='${element.images.plusPicSrc}' />
                         </div>
                       </div>
@@ -595,7 +595,7 @@ listOfThings.addEventListener("click", function(event) {
         `
     });
     
-    document.querySelector('#flipkartPostId').innerHTML = flipkartStrng
+    document.querySelector('#postId').innerHTML = postString
 }
 
 
