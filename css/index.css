@@ -41,7 +41,7 @@ html, body{
 @media (min-width:576px){.container{max-width:540px}}
 @media (min-width:768px){.container{max-width:720px}}
 @media (min-width:992px){.container{max-width:960px}}
-@media (min-width:1200px){.container{max-width:1140px}}
+@media (min-width:1200px){.container{max-width:1280px}}
 .row{   
     display: -ms-flexbox;
     display: flex;
@@ -61,7 +61,7 @@ html, body{
 
 /* -------- CUSTOMIZED GENERAL CLASSES ------------------- */
 
-.cust-ouline-0{
+.cust-outline-0{
     outline: 0
 }
 .cust-bg-transparent{
@@ -110,6 +110,12 @@ html, body{
     border-left: 0;
     border-top: 0;
     border-bottom: 3px solid #E3E4E5
+}
+.w-68 {
+    width: 68%
+}
+.w-32 {
+    width: 32%
 }
 
 /* ------------------ NAVBAR ---------------------------------------------------- */
@@ -969,3 +975,466 @@ header .row{
 @media only screen and (min-width: 1500px) and (max-width: 1919.98px) {#productDesc2 h1,#productDesc2 h1 span a, #productDesc2 p, #productDesc2 p span, #productDesc2 p del{font-size: 34.788px}}
 
 
+
+/* ----------------- CART PAGE NAVBAR -----------------------------------------------------------------------------*/
+
+
+.cart-page-navbar form button i{
+    color: #2874F0
+}
+
+.topnav {
+overflow: hidden
+}
+  
+.topnav .search-container {
+    float: right
+}
+  
+.topnav .search-container input[type=text] {
+    padding: 9px 6px;
+    border-radius: 3px 0 0 3px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    width: 92%
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.topnav .search-container input[type=text] {font-size: 12px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.topnav .search-container input[type=text] {font-size: 12px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.topnav .search-container input[type=text] {font-size: 13px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.topnav .search-container input[type=text] {font-size: 14px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.topnav .search-container input[type=text] {font-size: 15px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.topnav .search-container input[type=text] {font-size: 16px}}
+
+  
+.topnav .search-container button {
+    float: right;
+    padding: 10px 3px 2px 1.555px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border: 1px solid #fff; 
+    background: #fff;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    width: 8%
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.topnav .search-container button {font-size: 12px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.topnav .search-container button {font-size: 12px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.topnav .search-container button {font-size: 13px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.topnav .search-container button {font-size: 14px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.topnav .search-container button {font-size: 15px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.topnav .search-container button {font-size: 16px}}
+
+  
+.topnav .search-container button:hover {
+    background: #fff
+}
+
+.dropdown:hover .dropdown-menu {display: block}
+
+.navbar .d-flex ul {
+    flex-direction: row-reverse;
+}
+
+  
+/* ------------ CART SECTION --------------------------------------------------*/
+
+body .cartPageBody {
+    background: #f1f3f6;
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden
+}
+  
+.cartSection {
+    margin-top: 54px
+}
+
+.cartSectionBg {
+    background: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2)
+}
+
+#cartPageDropdownId .dropdown-menu .dropdown-item {
+    padding: .25rem 6.888rem .25rem 1.5rem
+}
+
+.dropdown-menu .dropdown-item i{
+    color: #2874F0
+}
+#cartPageDropdownId .dropdown-menu a {
+    font-size: 13.5px
+}
+.cartContainerBorderBottom {
+    border-bottom: 2px solid #2874F0;
+    margin-top: -2px
+}
+
+.cartSectionHeadings h4 {
+    font-weight: 600;
+    letter-spacing: 0.288px
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartSectionHeadings h4{font-size: .88rem}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartSectionHeadings h4{font-size: .99px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartSectionHeadings h4{font-size: 1rem}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartSectionHeadings h4{font-size: 1.2rem}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartSectionHeadings h4{font-size: 1.3rem}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartSectionHeadings h4{font-size: 1.3rem}}
+
+
+.cartSectionHeadings h5, .cartSectionHeadings h5 span {
+    font-weight: 600;
+    letter-spacing: 0.288px
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartSectionHeadings h5, .cartSectionHeadings h5 span{font-size: .77rem}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartSectionHeadings h5,.cartSectionHeadings h5 span{font-size: .99px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartSectionHeadings h5,.cartSectionHeadings h5 span{font-size: 1rem}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartSectionHeadings h5,.cartSectionHeadings h5 span{font-size: 1.2rem}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartSectionHeadings h5,.cartSectionHeadings h5 span{font-size: 1.3rem}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartSectionHeadings h5,.cartSectionHeadings h5 span{font-size: 1.3rem}}
+
+
+
+
+/* -------------- cartSectionHeadings SVG -----------------------------------------------------------------*/
+
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartSectionHeadings svg{height: 12px;width: 11px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartSectionHeadings svg {height: 12px;width: 11px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartSectionHeadings svg {height: 13px;width: 12px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartSectionHeadings svg {height: 14px;width: 13px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartSectionHeadings svg {height: 16px;width: 15px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartSectionHeadings svg {height: 16px;width: 15px}}
+
+
+.cartSectionButton button {
+    font-weight: 600;
+    color: #2874F0;
+    letter-spacing: 0.288px
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartSectionButton button{font-size: .66rem}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartSectionButton button{font-size: .66rem}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartSectionButton button{font-size: .99rem}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartSectionButton button{font-size: 1rem}}
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartSectionButton button{font-size: 1.1rem}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartSectionButton button{font-size: 1.1rem}}
+
+.cartSectionButton button:hover {
+    cursor: pointer;
+    background: none;
+    color: #2874F0
+}
+
+.qtyBtn button:first-child, .qtyBtn button:last-child {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(#fff,#f9f9f9);
+    display: inline-block;
+    border: 1px solid #c2c2c2;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+    padding-top: 1px;
+    line-height: 1
+}
+
+
+.qtyBtn .qtyBtnMiddle {
+    display: inline-block;
+    padding: 3px 6px;
+    width: calc(100% - 60px);
+    height: 100%;
+    width: 46px;
+    height: 28px;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 1px solid #c2c2c2;
+    margin: 0 9px
+}
+
+.qtyBtn .qtyBtnMiddle input[type=text] {
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    vertical-align: middle;
+    text-align: center
+}
+
+.cartItemDetails .d-flex .itemNameClass {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.cartItemDetails .d-flex .itemNameClass a {
+    color: #212121;
+    font-size: 16px;
+    line-height: 1;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(40, 116, 240);
+    text-align: start;
+    text-indent: 0px;
+    display: inline
+}
+
+.cartItemDetails .d-flex .itemNameClass a:hover {
+    cursor: pointer;
+    background: transparent;
+    color: rgb(40, 116, 240)
+}
+
+.cartItemDetails .d-flex .sellerName {
+    color: #878787;
+    font-size: 12px;
+    line-height: 16.8px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(135, 135, 135);
+    text-align: start;
+    text-indent: 0px;
+    cursor: auto
+}
+.cartItemDetails .d-flex .itemPrice {
+    display: inline-block;
+    color: #212121;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.2px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(33, 33, 33);
+    text-align: start;
+    text-indent: 0px;
+    cursor: auto 
+}
+
+.cartItemDetails .d-flex .itemRealPrice {
+    display: inline-block;
+    color: #878787;
+    text-decoration: line-through;
+    font-size: 14px;
+    line-height: 19.6px;
+    vertical-align: baseline;
+    letter-spacing: 0.788px;
+    word-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: line-through solid rgb(135, 135, 135);
+    text-align: start;
+    text-indent: 0px;
+    cursor: auto
+}
+
+.cartItemDetails .d-flex .discountPer {
+    color: #388e3c;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.6px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(56, 142, 60);
+    text-align: start;
+    text-indent: 0px;
+    cursor: auto
+}
+
+.cartItemDetails .d-flex .offerQty {
+    display: inline-block;
+    margin: 0 10px;
+    
+}
+.cartItemDetails .d-flex .offerQty a {
+    color: #388e3c;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19.6px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(56, 142, 60);
+    text-align: start;
+    text-indent: 0px;
+    cursor: pointer
+}
+.cartItemDetails .d-block .btn-link {
+    color: #212121;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25.2px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(33, 33, 33);
+    text-align: start;
+    text-indent: 0px;
+    
+}
+.cartItemDetails .d-block .btn-link:hover {
+    cursor: pointer;
+    color: #2874F0
+}
+.ftrClass .d-inline-flex span {
+    color: #565656;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19.6px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 300;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(86, 86, 86);
+    text-align: left;
+    text-indent: 0px;
+    cursor: auto
+}
+.ftrClass .d-inline-flex a {
+    color: #565656;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19.6px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 300;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(86, 86, 86);
+    text-align: left;
+    text-indent: 0px;
+    cursor: pointer
+}
+.ftrClass .d-inline-flex a:hover {
+    cursor: pointer;
+    background: transparent;
+    color: #565656
+}
+.ftrClass .d-inline-flex a::after {
+    content: '|';
+    padding-left: 7.788px;
+    font-size: 17px
+}
+.ftrClass .d-inline-flex a:last-child::after {
+    content: none
+}

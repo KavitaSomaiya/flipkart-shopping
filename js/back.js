@@ -6,13 +6,78 @@ function backPageFunction() {
       homeAndBack: {
         homeTitle: 'Back',
         backTitle: 'Home'
-      }
+      },
+      imgArray = ['./images/mob- (1).jpeg','./images/mob- (1).jpeg','./images/mob- (1).jpeg'],
     }
   ],
   backString=''
   
+  
 
   backPost.forEach(element => {
+
+    var images = element.imgArray[index].split(','),
+    imageOutput='',
+    imgStrng='';
+  
+  for(var j = 0; j < images.length; j++) {
+      imageOutput += '<img src="images[j] ">';
+  
+  
+    // gridster.add_widget("<li class='heartLiClass' data-id='0'>" +  + "</li>";
+  imgStrng +=
+    `
+    <li class='heartLiClass' data-id='0'>
+      <section class='sortFilterSection m-0 p-0 cust-ouline-0 w-100 mw-100 backHtmlImgList'>
+            <div class="container-fluid">
+              <div class='row no-gutters' id='backHtmlOnOffer'>
+                <div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4'>
+                  <div class='mainImgSectionP'>
+                    <p class='px-1'>On offer</p>
+                  </div>
+                </div>
+              </div>
+              <div class='row no-gutters my-4 my-sm-4 my-md-4 my-lg-4 my-xl-4' id='backHtmlImg'>
+                <div class='col-2 col-sm-2 col-md-3 col-lg-2 col-xl-2'>
+                  <div class=''>
+                    <div class='backHtmlImgClass'>
+                      ${imageOutput}
+                    </div>
+                  </div>
+                </div>
+                <div class='col-8 col-sm-8 col-md-8 col-lg-9 col-xl-9 px-1'>
+                  <div class='d-flex flex-column' id='productDesc2'>
+                    <div>
+                      <h1 class>
+                        Redmi Note 7 Pro (Nebula Red, 64 GB)  (4 GB RAM)
+                        <span><a href='#'>#JustHere</a></span>
+                      </h1>
+                      <p class='text-black font-weight-bold mb-0'>
+                        ₹13,999
+                        <span class='mx-4 text-mute' style='text-decoration: line-through;'>₹15,999</span>
+                        <del class='text-success'>12% off</del>
+                      </p>
+                      <div class='d-inline-flex align-items-bottom'>
+                          <p class='mt-2 pt-0 font-weight-bold'> Exchange available</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='col-2 col-sm-2 col-md-1 col-lg-1 col-xl-1 px-1 heartClassSection bg-white'  type='button'>
+                    <div class='row no-gutters justify-content-center align-items-center'>
+                      <div class='mainImgSectionHeart w-50 text-center'>
+                        <i data-id='0' class='heartClassFontSize heartClassGray heartClass fa fa-heart p-2 p-sm-2 p-md-2 py-lg-3 px-lg-2 py-xl-4 px-xl-1' aria-hidden='true'></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </li>
+  
+    `
+    document.querySelector('#heartUlId').innerHTML = imgStrng
+  }
     backString +=
     `
 
@@ -115,7 +180,7 @@ function backPageFunction() {
           </div>
         </section>
         
-        <ul class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100 list-unstyled' id='heartUlId' onload='dispImgFunc();'>
+        <ul class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100 list-unstyled' id='heartUlId'>
             
         </ul>
 
@@ -132,66 +197,5 @@ function backPageFunction() {
 
 
 function dispImgFunc() {
-  var imgArray = {'src': ['./images/mob- (1).jpeg','./images/mob- (1).jpeg','./images/mob- (1).jpeg']},
-  images = imgArray.src[index].split(','),
-  imageOutput='',
-  imgStrng='';
-  for(var j = 0; j < images.length; j++) {
-      imageOutput += '<img src="images[j] + ">';
   
-  
-    // gridster.add_widget("<li class='heartLiClass' data-id='0'>" +  + "</li>";
-  imgStrng +=
-    `
-    <li class='heartLiClass' data-id='0'>
-      <section class='sortFilterSection m-0 p-0 cust-ouline-0 w-100 mw-100 backHtmlImgList'>
-            <div class="container-fluid">
-              <div class='row no-gutters' id='backHtmlOnOffer'>
-                <div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4'>
-                  <div class='mainImgSectionP'>
-                    <p class='px-1'>On offer</p>
-                  </div>
-                </div>
-              </div>
-              <div class='row no-gutters my-4 my-sm-4 my-md-4 my-lg-4 my-xl-4' id='backHtmlImg'>
-                <div class='col-2 col-sm-2 col-md-3 col-lg-2 col-xl-2'>
-                  <div class=''>
-                    <div class='backHtmlImgClass'>
-                      ${imageOutput}
-                    </div>
-                  </div>
-                </div>
-                <div class='col-8 col-sm-8 col-md-8 col-lg-9 col-xl-9 px-1'>
-                  <div class='d-flex flex-column' id='productDesc2'>
-                    <div>
-                      <h1 class>
-                        Redmi Note 7 Pro (Nebula Red, 64 GB)  (4 GB RAM)
-                        <span><a href='#'>#JustHere</a></span>
-                      </h1>
-                      <p class='text-black font-weight-bold mb-0'>
-                        ₹13,999
-                        <span class='mx-4 text-mute' style='text-decoration: line-through;'>₹15,999</span>
-                        <del class='text-success'>12% off</del>
-                      </p>
-                      <div class='d-inline-flex align-items-bottom'>
-                          <p class='mt-2 pt-0 font-weight-bold'> Exchange available</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class='col-2 col-sm-2 col-md-1 col-lg-1 col-xl-1 px-1 heartClassSection bg-white'  type='button'>
-                    <div class='row no-gutters justify-content-center align-items-center'>
-                      <div class='mainImgSectionHeart w-50 text-center'>
-                        <i data-id='0' class='heartClassFontSize heartClassGray heartClass fa fa-heart p-2 p-sm-2 p-md-2 py-lg-3 px-lg-2 py-xl-4 px-xl-1' aria-hidden='true'></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </li>
-  
-    `
-    document.querySelector('#heartUlId').innerHTML = imgStrng
   }
-}
