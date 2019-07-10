@@ -49,7 +49,7 @@ function postFunc(){
                       <i class='fas fa-search text-white' aria-hidden='true'><!-- &#xf002; --></i>
                     </a>
                     <input class="search form-control d-none" id='searchId' type="text" name="search" placeholder="Search..." />
-                    <a class='ml-2' href='#' title="View Your Cart" data-toggle="tooltip">
+                    <a class='ml-2' href='#' title="View Your Cart" data-toggle="tooltip" onclick='viewCart();'>
                       <i class='fas fa-cart-plus text-white pl-0 px-0 mx-0' aria-hidden='true'>
                         <!-- &#xf217;	-->
                         <span class='badge badge-pill badge-cart-notify' id='cartQty'>0</span>
@@ -242,7 +242,7 @@ function postFunc(){
                     <div class='d-flex align-items-center'>
                       <div class='col p-0 m-0'>
                         
-                        <button class='btn btn-lg rounded-0 float-left' type='button' onclick='cartQtyFunc();'>Add to Cart</button>
+                        <button class='btn btn-lg rounded-0 float-left' type='button' onclick='cartQtyFunc(); pushSrc();'>Add to Cart</button>
 
                         
                       </div>
@@ -636,11 +636,7 @@ function heartFuncTwo() {
   toggleClass('heartClassRed');
 }
 
-function cartQtyFunc() {
-    var cartQty = parseInt(document.querySelector('#cartQty').textContent);
-    cartQty++;
-    document.querySelector('#cartQty').textContent = cartQty;
-}
+
 
 function openBackPageFunc() {
     window.open('./back.html','_self','scrollbars=yes,menubar=yes');
@@ -664,6 +660,8 @@ function searchFunc() {
 
 document.querySelector('.dropdown').addEventListener('mouseover', mouseoverFunc);
 document.querySelector('.dropdown').addEventListener('mouseout', mouseoverFunc);
+document.querySelector('.dropdown').addEventListener('click', dropdownClick);
+
 
 function mouseoverFunc() {
   setTimeout(function(){
@@ -671,4 +669,29 @@ function mouseoverFunc() {
    }, 125);
 }
 
+function dropdownClick() {
+  document.querySelector('.dropdown').removeEventListener('mouseover');
+  document.querySelector('.dropdown').removeEventListener('mouseout');
+    document.querySelector('.dropdown').toggleClass('d-block');
+  
+}
 
+
+
+
+function cartQtyFunc() {
+  var cartQty = parseInt(document.querySelector('#cartQty').textContent);
+  cartQty++;
+  document.querySelector('#cartQty').textContent = cartQty;
+}
+
+function pushSrc () {
+var currentImg = document.querySelector('#currentImg').src;
+var cartImgUrl = currentImg;
+viewCart();
+}
+function viewCart() {
+  
+  window.open('./cart-page.html','_blank','scrollbars=yes,menubar=yes');
+  window.focus();
+}
