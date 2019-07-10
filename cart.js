@@ -87,12 +87,14 @@ document.querySelector('.dropdown').addEventListener('click', dropdownClick);
 function mouseoverFunc() {
   setTimeout(function(){
     document.querySelector('#caretId').classList.toggle('fa-angle-up');
-   }, 125);
+   }, 125); 
 }
 
 function dropdownClick() {
   document.querySelector('.dropdown').removeEventListener('mouseover');
-  document.querySelector('.dropdown').removeEventListener('mouseout');
-    document.querySelector('.dropdown').toggleClass('d-block');
+document.querySelector('.dropdown').removeEventListener('mouseout');
+document.querySelector('#caretId').classList.remove('fa-angle-down');
+    document.querySelector('#caretId').classList.add('fa-angle-up');
+    document.querySelector('.dropdown-menu').style.display = 'block';  
   
 }

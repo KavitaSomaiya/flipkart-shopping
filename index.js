@@ -677,3 +677,4 @@ function viewCart() {
   window.open('./cart-page.html','_blank','scrollbars=yes,menubar=yes');
   window.focus();
 }
+
