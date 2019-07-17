@@ -1,6 +1,6 @@
-﻿
 
-function backPost(){
+
+function postFunc(){
   
   var post = [
     {
@@ -643,7 +643,7 @@ function openBackPageFunc() {
     return false;
 }
 function openHomePageFunc() {
-    window.open('./home-page.html','_self','scrollbars=yes,menubar=yes');
+    window.open('./index.html','_self','scrollbars=yes,menubar=yes');
     return false;
 }
 function openIndexPageFunc() {
@@ -685,89 +685,4 @@ function mouseoverFunc() {
   setTimeout(function(){
     document.querySelector('#caretId').classList.toggle('fa-angle-up');
    }, 125);
-}
-
-
-
-function clickDropdown() {
-  document.querySelector('.dropdown').removeEventListener('mouseover');
-  document.querySelector('.dropdown').removeEventListener('mouseout');
-  if (document.querySelector('#caretId').classList == 'fa-angle-down') {
-    document.querySelector('#caretId').classList.remove('fa-angle-down');
-    document.querySelector('#caretId').classList.add('fa-angle-up');
-  } else {
-    document.querySelector('#caretId').classList.remove('fa-angle-up');
-    document.querySelector('#caretId').classList.add('fa-angle-down');
-  }
-}
-
-
-
-
-
-function changeArrow() {
-  const viewDetails = document.querySelector('#viewDetails');
-  const icon = viewDetails.querySelector('#arrowIdOne');
-  if (icon.classList.contains('fa-angle-right')) {
-    icon.classList.remove('fa-angle-right');
-    icon.classList.add('fa-angle-down');
-    text.innerHTML = 'Hide';
-  } else {
-    icon.classList.remove('fa-angle-down');
-    icon.classList.add('fa-angle-right');
-    text.innerHTML = 'Show';
-  }
-}
-
-
-function changeArrow2() {
-  const viewDetails = document.querySelector('#allDetails');
-  const icon = viewDetails.querySelector('#arrowId');
-  if (icon.classList.contains('fa-angle-right')) {
-    icon.classList.remove('fa-angle-right');
-    icon.classList.add('fa-angle-down');
-    text.innerHTML = 'Hide';
-  } else {
-    icon.classList.remove('fa-angle-down');
-    icon.classList.add('fa-angle-right');
-    text.innerHTML = 'Show';
-  }
-}
-
-
-
-//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol
-
-//https://stackoverflow.com/questions/47175281/how-to-change-content-of-i-classmaterial-icons-as-it-was-a-p
-function showImage(imgPath) {
-  var curImage = document.querySelector('#currentImg');  
-  curImage.src = imgPath; 
-}
-
-
-
-//function heartFunc() {
-//    document.querySelector('.heartClass').classList.toggle('heartClassRed');
-
-
-
-
-
-document.querySelector('.dropdown').addEventListener('mouseover', mouseoverFunc);
-document.querySelector('.dropdown').addEventListener('mouseout', mouseoverFunc);
-document.querySelector('.dropdown').addEventListener('click', clickDropdown);
-
-
-function mouseoverFunc() {
-  setTimeout(function(){
-    document.querySelector('#caretId').classList.toggle('fa-angle-up');
-    }, 125);
-}
-
-
-
-//https://stackoverflow.com/questions/51494927/toggle-the-class-of-unordered-list-items-using-simple-javascript
-//} 
-function heartFuncTwo() {
-  toggleClass('heartClassRed');
 }

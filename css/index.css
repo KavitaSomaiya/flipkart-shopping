@@ -126,6 +126,9 @@ header .row{
     color: #ffffff;
     font-size: 16px
 }
+#dropdownMenu {
+    left: auto
+}
 
 .navbar .container-fluid .navbar-toggler{
     border: 0;
@@ -871,6 +874,10 @@ header .row{
     cursor: pointer
 }
 
+#indexImgId li {
+    cursor: pointer
+}
+
 .backHtmlImgList {
     position: relative;
     border-bottom: 1.677px solid #f0f0f0;
@@ -1060,7 +1067,28 @@ overflow: hidden
     background: #fff
 }
 
-.dropdown:hover .dropdown-menu {display: block}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.dropdown:focus > .dropdown-menu {display: block}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.dropdown:focus > .dropdown-menu {display: block}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.dropdown:focus > .dropdown-menu {display: block}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.dropdown:focus > .dropdown-menu {display: block}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.dropdown:hover > .dropdown-menu {display: block}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.dropdown:hover > .dropdown-menu {display: block}}
+
 
 .navbar .d-flex ul {
     flex-direction: row-reverse;
@@ -1085,7 +1113,10 @@ body .cartPageBody {
     border-radius: 2px;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.2)
 }
-
+.dropdown #navbardrop:hover {
+    text-decoration: none;
+    background: transparent
+}
 #cartPageDropdownId .dropdown-menu .dropdown-item {
     padding: .25rem 6.888rem .25rem 1.5rem
 }
@@ -1215,40 +1246,97 @@ body .cartPageBody {
 }
 
 .qtyBtn button:first-child, .qtyBtn button:last-child {
-    width: 28px;
-    height: 28px;
     background: linear-gradient(#fff,#f9f9f9);
     display: inline-block;
     border: 1px solid #c2c2c2;
     cursor: pointer;
-    font-size: 16px;
     border-radius: 50%;
     padding-top: 1px;
     line-height: 1
 }
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.qtyBtn button:first-child, .qtyBtn button:last-child{font-size: 10.688px;height:20px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.qtyBtn button:first-child, .qtyBtn button:last-child{font-size: 10.688px;height:22px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.qtyBtn button:first-child, .qtyBtn button:last-child{font-size: 12.688px;height:24px;width:20px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.qtyBtn button:first-child, .qtyBtn button:last-child{font-size: 14px;height:26px}}
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.qtyBtn button:first-child, .qtyBtn button:last-child{font-size: 16px;height: 28px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.qtyBtn button:first-child, .qtyBtn button:last-child{font-size: 17px;height: 28px}}
 
 
 .qtyBtn .qtyBtnMiddle {
     display: inline-block;
-    padding: 3px 6px;
-    width: calc(100% - 60px);
     height: 100%;
-    width: 46px;
-    height: 28px;
+    
+    max-width: 100%;
+    /*width: 46px;
+    height: 28px;*/
     border-radius: 2px;
     background-color: #fff;
     border: 1px solid #c2c2c2;
-    margin: 0 9px
+    text-align: center;
+    vertical-align: middle
 }
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.qtyBtn .qtyBtnMiddle {margin: 0 3.688px;width: 100%}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.qtyBtn .qtyBtnMiddle {margin: 0 3.688px;width: 100%}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.qtyBtn .qtyBtnMiddle {margin: 0 3.688px;width: 100%}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.qtyBtn .qtyBtnMiddle {margin: 0 9px;}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.qtyBtn .qtyBtnMiddle {margin: 0 9px;}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.qtyBtn .qtyBtnMiddle {margin: 0 9px;}}
+
 
 .qtyBtn .qtyBtnMiddle input[type=text] {
     border: none;
-    width: 100%;
-    font-size: 14px;
     font-weight: 500;
-    vertical-align: middle;
-    text-align: center
+    text-align: center;
+    max-width: 100%
 }
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.qtyBtn .qtyBtnMiddle input[type=text]{font-size: 8.788px;width: 14px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.qtyBtn .qtyBtnMiddle input[type=text]{font-size: 8.788px;width: 14px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.qtyBtn .qtyBtnMiddle input[type=text]{font-size: 10.5px;width: 14px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.qtyBtn .qtyBtnMiddle input[type=text]{font-size: 12.5px;width:38px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.qtyBtn .qtyBtnMiddle input[type=text]{font-size: 14px;width:40px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.qtyBtn .qtyBtnMiddle input[type=text]{font-size: 14.5px;width:41px}}
+
 .cartItemImg a img {
     text-align: center
 }
@@ -1583,9 +1671,7 @@ body .cartPageBody {
 }
 
 .cart-sticky-bottom {
-    position: sticky;
     position: -webkit-sticky;
-    bottom: 0;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -1612,10 +1698,10 @@ body .cartPageBody {
 
 
 /*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
-@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cart-sticky-bottom {padding: 16px 23px;justify-content: flex-end}}
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cart-sticky-bottom {padding: 16px 23px;justify-content: flex-end;position: sticky;bottom: 0}}
 
 /*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
-@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cart-sticky-bottom {padding: 18px 25px;justify-content: flex-end}}
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cart-sticky-bottom {padding: 18px 25px;justify-content: flex-end;position: sticky;bottom: 0}}
 
 .cart-sticky-bottom a {
     padding-right: 35.555px;
