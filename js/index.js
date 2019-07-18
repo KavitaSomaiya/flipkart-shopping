@@ -373,7 +373,7 @@ createIndexImg = () => {
     `            
   });
   document.querySelector('#indexImgId').innerHTML = indexDetails;
-  indexData = parseJSON(window.localStorage.setItem('indexDetails'));
+  window.localStorage.setItem('indexDataStrng', JSON.stringify(indexDetails));
 }
 
 

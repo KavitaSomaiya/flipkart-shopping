@@ -88,12 +88,12 @@ function itemDetailsHeader(){
 
   function openItemDetails() {
   
-    let indexDataRender = parseJSON(window.localStorage.getItem('indexData')),
+    let indexDataRender = JSON.parse(window.localStorage.getItem('indexDataStrng')),
     itemDetailsString=''
   
   
     indexDataRender.forEach(item => {
-      itemDetailsString =
+      itemDetailsString +=
     
       `
       <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100' id='mainImgSection'>
@@ -529,6 +529,7 @@ function itemDetailsHeader(){
                       </div>
                   </section>
     `
+  });
     document.querySelector('#itemDetailsId').innerHTML = itemDetailsString;
     window.open('./itemDetails.html','_self','scrollbars=yes,menubar=yes');
   }
