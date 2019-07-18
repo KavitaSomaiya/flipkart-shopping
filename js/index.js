@@ -377,15 +377,16 @@ createIndexImg = () => {
   document.querySelector('#indexImgId').innerHTML = indexDetails
 }
 
-window.localStorage.setItem('indexData');
+var setIndexData = window.localStorage.setItem('indexData');
+
+
 
 function openItemDetails() {
   
-  var retrivedIndexData = window.localStorage.getItem('indexData');
-  var parsedIndexData = JSON.parse(retrivedIndexData);    
-  let itemDetailsString=''  
+  var getIndexData = JSON.parse(window.localStorage.getItem('setIndexData')),
+  itemDetailsString=''
 
-  parsedIndexData.forEach(item => {
+  getIndexData.forEach(item => {
     itemDetailsString +=
   
     `
