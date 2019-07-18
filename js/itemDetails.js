@@ -92,7 +92,7 @@ function itemDetailsHeader(){
     itemDetailsString=''
   
   
-    indexDataRender.forEach(item => {    
+    indexDataRender.forEach(item => {
       itemDetailsString =
     
       `
