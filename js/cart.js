@@ -2,7 +2,7 @@
 function createCartDetails () {
   let cartData = [
     {
-      cartImgUrl:'./images/mob- (1).jpeg',
+      cartImgUrl:'./images/mob-3.jpeg',
       quantity: 1,
       name:'Oppo v15',
       sellerName:'Omni van retail',
