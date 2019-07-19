@@ -23,6 +23,15 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active { 
+    -moz-outline-style: none;
+	outline: none
+}
 *, html, body{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -128,6 +137,16 @@ header .row{
 }
 #dropdownMenu {
     left: auto
+}
+.navbar-toggler:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    outline: none
+}
+.navbar-toggler{
+    padding: .25rem .0
+}
+.navbar-light .navbar-toggler {
+    border: none
 }
 
 .navbar .container-fluid .navbar-toggler{
@@ -874,7 +893,7 @@ header .row{
     cursor: pointer
 }
 
-#indexImgId li {
+#indexImgId li .backHtmlImgClass, #indexImgId li #productDesc2 {
     cursor: pointer
 }
 
@@ -1097,7 +1116,7 @@ overflow: hidden
   
 /* ------------ CART SECTION --------------------------------------------------*/
 
-body .cartPageBody {
+body .cust-bg {
     background: #f1f3f6;
     height: 100%;
     max-width: 100%;
