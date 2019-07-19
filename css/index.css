@@ -28,9 +28,8 @@ html {
 a:active,
 a:focus,
 input:focus,
-input:active { 
-    -moz-outline-style: none;
-	outline: none
+input:active {
+    outline: none
 }
 *, html, body{
     font-family: 'Roboto', sans-serif;
