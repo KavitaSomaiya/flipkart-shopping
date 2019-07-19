@@ -74,6 +74,6 @@ function itemDetailBody () {
   document.querySelector('#itemDetail').innerHTML = itemDetailStrng
 }
 
-function toggleHeartClr(id) {
+function toggleHeartClr (id) {
   document.getElementById(`heartId-${id}`).classList.toggle('text-danger')
 }

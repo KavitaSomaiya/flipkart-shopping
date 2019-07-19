@@ -209,7 +209,7 @@ function goToItemDetail (it) {
   window.location.href = './item-details.html'
 }
 
-function goToIndexPage() {
+function goToIndexPage () {
   window.open('./index.html','_self','scrollbars=yes,menubar=yes');
   window.focus()
 }
@@ -219,16 +219,16 @@ function goToWishList () {
   window.focus()
 }
 
-function srch() {
+function srch () {
   document.querySelector('#searchId').classList.toggle('d-block')
 }
 
-function viewCart() {
+function viewCart () {
   window.open('./cart.html','_self','scrollbars=yes,menubar=yes');
   window.focus()
 }
 
-function toggleHeartClr(id) {
+function toggleHeartClr (id) {
   document.getElementById(`idHeart-${id}`).classList.toggle('text-danger')
 }
 

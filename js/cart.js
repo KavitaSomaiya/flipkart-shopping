@@ -1,5 +1,5 @@
 ﻿
-function createCartDetails() {
+function createCartDetails () {
   let cartData = [
     {
       cartImgUrl:'./images/mob- (1).jpeg',
@@ -85,14 +85,13 @@ document.querySelector('.dropdown').addEventListener('mouseover', mouseoverFunc)
 document.querySelector('.dropdown').addEventListener('mouseout', mouseoverFunc);
 document.querySelector('.dropdown').addEventListener('click', clickDropdown);
 
-
-function mouseoverFunc() {
-  setTimeout(function(){
+function mouseoverFunc () {
+  setTimeout (function() {
     document.querySelector('#caretId').classList.toggle('fa-angle-up');
-    }, 125);
+  }, 125);
 }
 
-function clickDropdown() {
+function clickDropdown () {
   document.querySelector('.dropdown').removeEventListener('mouseover');
   document.querySelector('.dropdown').removeEventListener('mouseout');
   if (document.querySelector('#caretId').classList == 'fa-angle-down') {
