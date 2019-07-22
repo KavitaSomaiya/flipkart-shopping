@@ -550,6 +550,7 @@ header .row{
 
 
 /* ------------- viewDetails --------------------------------------------------------------------*/
+
 #viewDetails  [type=button] {
     -webkit-appearance: none;
     cursor: pointer
@@ -892,7 +893,7 @@ header .row{
     cursor: pointer
 }
 
-#indexImgId li .backHtmlImgClass, #indexImgId li #productDesc2 {
+#indexImgId li .backHtmlImgClass, #indexImgId li #productDesc2 h1 {
     cursor: pointer
 }
 

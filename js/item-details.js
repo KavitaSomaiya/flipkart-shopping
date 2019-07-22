@@ -17,7 +17,7 @@ function itemDetailBody () {
           </div>
         <div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4' onclick='heartFunc();' type='button'>
           <div class='rounded-circle shadow-lg mainImgSectionHeart'>
-            <i class='fa fa-heart p-3 heartClassFontSize heartClassGray' id='heartId-${curItem.dataNumber}' aria-hidden='true'></i>
+            <i class='fa fa-heart p-3 heartClassFontSize heartClassGray' onclick='toggleHeartColor();' id='like-btn' aria-hidden='true'></i>
           </div>
         </div>
       </div>
@@ -74,6 +74,19 @@ function itemDetailBody () {
   document.querySelector('#itemDetail').innerHTML = itemDetailStrng
 }
 
-function toggleHeartClr (id) {
-  document.getElementById(`heartId-${id}`).classList.toggle('text-danger')
+function toggleHeartColor () {
+  document.querySelector('#like-btn').classList.toggle('text-danger')
+}
+
+function toggleDown (e) {
+  var id = e.gerAttribute('id');
+  if (id.querySelector('i').classList.contains('fa-chevron-right')) {
+    id.querySelector('i').classList.remove('fa-chevron-right');
+    id.querySelector('i').classList.add('fa-chevron-down')
+  } else {
+    id.querySelector('i').classList.remove('fa-chevron-down');
+    id.querySelector('i').classList.add('fa-chevron-right')
+  }
+  
+
 }

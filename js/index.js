@@ -145,6 +145,7 @@ let indexData = [
 indexDetails =''
 createIndexImg = () => {
   indexData.forEach(item => {
+    const id = item.dataNumber
     indexDetails +=      
       `
         <li class='heartLiClass'>
@@ -160,15 +161,15 @@ createIndexImg = () => {
               <div class='row no-gutters my-4 my-sm-4 my-md-4 my-lg-4 my-xl-4' id='backHtmlImg'>
                 <div class='col-2 col-sm-2 col-md-3 col-lg-2 col-xl-2'>
                   <div>
-                    <div class='backHtmlImgClass' onclick="goToItemDetail('${it}');">
-                      <img alt src='${item.indexImgUrl}' />
+                    <div class='backHtmlImgClass' onclick="goToItemDetail('${id}');">
+                      <img alt src='${item.indexImgUrl}' /> 
                     </div>
                   </div>
                 </div>
                 <div class='col-8 col-sm-8 col-md-8 col-lg-9 col-xl-9 px-1'>
-                  <div class='d-flex flex-column' id='productDesc2' onclick="goToItemDetail('${it}');">
+                  <div class='d-flex flex-column' id='productDesc2'>
                     <div>
-                      <h1 class>
+                      <h1 class onclick="goToItemDetail('${id}');">
                         ${item.name}
                         <span><a href='#'>#JustHere</a></span>
                       </h1>
@@ -188,8 +189,8 @@ createIndexImg = () => {
                 <div class='col-2 col-sm-2 col-md-1 col-lg-1 col-xl-1 px-1 heartClassSection bg-white'  type='button'>
                   <div class='row no-gutters justify-content-center align-items-center'>
                     <div class='mainImgSectionHeart w-50 text-center'>
-                      <i id='IdHeart-${curItem.dataNumber}' class='heartClassFontSize heartClassGray heartClass fa fa-heart p-2 p-sm-2 p-md-2 py-lg-3 px-lg-2 py-xl-4 px-xl-1' aria-hidden='true'></i>
-                    </div>
+                      <i onclick='toggleHeartClr(event);' class='heartClassFontSize heartClassGray heartClass fa fa-heart p-2 p-sm-2 p-md-2 py-lg-3 px-lg-2 py-xl-4 px-xl-1' aria-hidden='true'></i>
+                    </div> 
                   </div>
                 </div>
               </div>
@@ -228,7 +229,7 @@ function viewCart () {
   window.focus()
 }
 
-function toggleHeartClr (id) {
-  document.getElementById(`idHeart-${id}`).classList.toggle('text-danger')
+function toggleHeartClr (e) {
+  e.target.classList.toggle('text-danger')
 }
 
