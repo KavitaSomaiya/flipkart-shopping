@@ -90,7 +90,6 @@ function toggleDown (e) {
 }
 
 function addToCart (e) {
-  console.log(curItem)
   window.localStorage.setItem('curCartItm', JSON.stringify(curItem))
 }
 
