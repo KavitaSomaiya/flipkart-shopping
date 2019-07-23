@@ -90,7 +90,7 @@ function toggleDown (e) {
 }
 
 function addToCart (e) {
-  window.localStorage.setItem('curCartItm', JSON.stringify(curItem))
+  e.window.localStorage.setItem('curCartItm', JSON.stringify(curItem))
 }
 
 function goToCartPage () {
