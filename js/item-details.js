@@ -1,6 +1,6 @@
+var curItem = JSON.parse(window.localStorage.getItem('curItem'))
 
 function itemDetailBody () {
-  var curItem = JSON.parse(window.localStorage.getItem('curItem'))
   let mainImgStrng =
     `
       <div class="container-fluid">
