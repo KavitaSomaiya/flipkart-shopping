@@ -1,7 +1,8 @@
 ﻿
+var curCartItm = JSON.parse(window.localStorage.getItem('curCartItm'))
+
 function createCartData () {
-  var curCartItm = JSON.parse(window.localStorage.getItem('curCartItm')),
-  cartDetail =''
+  let cartDetail =''
   if (curCartItm.length == 0) {
     cartDetail = `<div>Your cart is empty !!!!!</div>`
   } else if (curCartItm.length > 0) {

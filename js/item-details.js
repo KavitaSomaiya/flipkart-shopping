@@ -1,3 +1,4 @@
+
 var curItem = JSON.parse(window.localStorage.getItem('curItem'))
 
 function itemDetailBody () {
@@ -88,10 +89,9 @@ function toggleDown (e) {
   }
 }
 
-function addToCart () {
-  let curCartItm = curItem.filter(curItem => curItem.dataNumber === item)
-  console.log(curCartItm)
-  window.localStorage.setItem('curCartItm', JSON.stringify(curCartItm[0]))
+function addToCart (e) {
+  console.log(curItem)
+  window.localStorage.setItem('curCartItm', JSON.stringify(curItem))
 }
 
 function goToCartPage () {
