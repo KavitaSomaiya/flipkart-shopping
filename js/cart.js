@@ -11,8 +11,8 @@ function createCartData () {
             <div class='d-flex flex-column'>
               <div class='align-middle cartItemImg text-center p-1 p-sm-1 p-md-1 p-lg-2 p-xl-2'>
                 <a class='text-center' href='#'>
-                  <img src='${curCartItm.cartImgUrl}' alt${curCartItm.name} />
-                </a>                          
+                  <img src='${curCartItm.indexImgUrl}' alt${curCartItm.name} />
+                </a>
               </div>
               <div class='d-inline-flex justify-content-center align-items-center qtyBtn'>
                 <button class='rounded-circle shadow-none' type='button'>-</button>
