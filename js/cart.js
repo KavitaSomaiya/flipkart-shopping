@@ -30,7 +30,7 @@ function createCartData () {
               <div class='d-flex mt-1 mt-sm-1 mt-md-1 mt-lg-2 mt-xl-2 justify-content-start align-items-center'>
                 <span class='itemPrice'>&#x20B9;${curCartItm.price}</span>
                 <del><span class='itemRealPrice ml-2'>&#x20B9;${curCartItm.retailPrice}</span></del>
-                <span class='discountPer ml-2'>${curCartItm.discount}</span>
+                <span class='discountPer ml-2'>${curCartItm.discount}% Discount</span>
                 <div class='offerQty ml-2 d-none d-sm-none d-md-block d-lg-block d-xl-block' id='offerQtyId'>
                   <a>
                     ${curCartItm.offersApplied}
@@ -52,6 +52,5 @@ function createCartData () {
         </div>
       `
     document.querySelector('#myCart').innerHTML = cartDetail
-    debugger;
     document.querySelector('#totalItemInCart').textContent = `My Cart (${curCartItm.length})`
   }
