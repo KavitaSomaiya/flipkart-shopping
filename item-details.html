@@ -44,7 +44,7 @@
                 <a id='wishList' onclick='goToWishList();' class='mr-2 ml-1 mr-sm-1 ml-sm-2 mr-md-4 ml-md-3 mr-lg-4 ml-lg-3 mr-xl-4 ml-xl-3' href='#' title="Wish List" data-toggle="tooltip">
                   <i class='fas fa-heart text-white' aria-hidden='true'></i>
                 </a>
-                <a class='ml-2' href='#' title="View Your Cart" data-toggle="tooltip" onclick='viewCart();'>
+                <a class='ml-2' href='#' title="View Your Cart" data-toggle="tooltip" onclick='goToCartPage();'>
                   <i class='fas fa-cart-plus text-white pl-0 px-0 mx-0' aria-hidden='true'>
                     <span class='badge badge-pill badge-cart-notify' id='cartQty'>0</span>
                   </i>
@@ -204,7 +204,7 @@
               <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 border-top-bottom'>
                 <div class='d-flex align-items-center'>
                   <div class='col p-0 m-0'>
-                    <button class='btn btn-lg rounded-0 float-left' type='button'>Add to Cart</button>
+                    <button class='btn btn-lg rounded-0 float-left' onclick="addToCart('${id}');" type='button'>Add to Cart</button>
                   </div>
                   <div class='col p-0 m-0'>
                       <button class='btn btn-lg rounded-0 float-right' type='button'>Buy Now</button>
@@ -227,9 +227,9 @@
                 </div>
               </div>
             </div>
-          </div> 
+          </div>
         </section>
-        <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100' id='td' onclick='toggleDown(this);' type='button' style='-webkit-appearance: none;'>
+        <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100' onclick='toggleDown(event);' type='button' style='-webkit-appearance: none;'>
           <div class='container-fluid' id='viewDetails'>
             <div class='row' type='button' data-toggle="collapse" data-target="#hiddenViewDetails" aria-expanded="false">
               <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 cust-border-bottom'>
@@ -276,7 +276,7 @@
             </div>
           </div>
         </section>
-        <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100' id='dt' onclick='toggleDown(this);' type='button' style='-webkit-appearance: none;'>
+        <section class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100' onclick='toggleDown(event);' type='button' style='-webkit-appearance: none;'>
           <div class='container-fluid' id='allDetails'>
             <div class='row' type='button' data-toggle="collapse" data-target="#hiddenAllDetails" aria-expanded="false">
               <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 cust-border-bottom' >

@@ -224,11 +224,6 @@ function srch () {
   document.querySelector('#searchId').classList.toggle('d-block')
 }
 
-function viewCart () {
-  window.open('./cart.html','_self','scrollbars=yes,menubar=yes');
-  window.focus()
-}
-
 function toggleHeartClr (e) {
   e.target.classList.toggle('text-danger')
 }

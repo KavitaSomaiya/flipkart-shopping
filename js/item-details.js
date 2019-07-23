@@ -79,14 +79,21 @@ function toggleHeartColor () {
 }
 
 function toggleDown (e) {
-  var id = e.gerAttribute('id');
-  if (id.querySelector('i').classList.contains('fa-chevron-right')) {
-    id.querySelector('i').classList.remove('fa-chevron-right');
-    id.querySelector('i').classList.add('fa-chevron-down')
+  if (e.target.querySelector('i').classList.contains('fa-chevron-right')) {
+    e.target.querySelector('i').classList.remove('fa-chevron-right')
+    e.targetquerySelector('i').classList.add('fa-chevron-down')
   } else {
-    id.querySelector('i').classList.remove('fa-chevron-down');
-    id.querySelector('i').classList.add('fa-chevron-right')
+    e.target.querySelector('i').classList.remove('fa-chevron-down') 
+    e.target.querySelector('i').classList.add('fa-chevron-right')
   }
-  
+}
 
+function addToCart () {
+  let curCartItm = curItem.filter(curItem => curItem.dataNumber === item)
+  console.log(curCartItm)
+  window.localStorage.setItem('curCartItm', JSON.stringify(curCartItm[0]))
+}
+
+function goToCartPage () {
+  window.location.href = './cart.html'
 }
