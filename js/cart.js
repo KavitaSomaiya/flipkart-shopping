@@ -59,15 +59,22 @@ function removeItem(n) {
   debugger;
   var r = confirm('Are you sure you want to remove this item?');
   if (r ==  true) {
-    console.log(n)
-    //let itm = parseInt(it)
-    let nIndex = cartItems.indexOf(cartItems.n)
-    //let curCartItem = cartItems.filter(i => i.dataNumber === itm)
+    let no = parseInt(n)
+    console.log(no)
+    let num = cartItems.filter(i => i.dataNumber === no)
+    console.log(num)
+    let nIndex = cartItems.indexOf(num)
     console.log(nIndex)
-    delete cartItems[nIndex]
+    cartItems.splice(nIndex, 1)
+    console.log(cartItems)
     window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
     window.location.href = './cart.html'
-  } else {
-    return false
   }
 }
+
+//for( var j = 0; j < cartItems.length; j++){ 
+  //if ( cartItems[j] === nIndex) {
+    //cartItems.splice(j, 1)
+    //j--
+  //}
+//}
