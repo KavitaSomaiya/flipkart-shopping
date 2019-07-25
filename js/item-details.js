@@ -1,5 +1,5 @@
 
-var curItem = JSON.parse(window.localStorage.getItem('curItem'))
+let curItem = JSON.parse(window.localStorage.getItem('curItem'))
 
 function itemDetailBody () {
   let mainImgStrng =
@@ -82,15 +82,26 @@ function toggleHeartColor () {
 function toggleDown (e) {
   if (e.target.querySelector('i').classList.contains('fa-chevron-right')) {
     e.target.querySelector('i').classList.remove('fa-chevron-right')
-    e.targetquerySelector('i').classList.add('fa-chevron-down')
+    e.target.querySelector('i').classList.add('fa-chevron-down')
   } else {
-    e.target.querySelector('i').classList.remove('fa-chevron-down') 
+    e.target.querySelector('i').classList.remove('fa-chevron-down')
     e.target.querySelector('i').classList.add('fa-chevron-right')
   }
 }
 
-function addToCart (e) {
-  e.window.localStorage.setItem('curCartItm', JSON.stringify(curItem))
+function addToCart () {
+  debugger;
+  let cartItem = curItem
+  var cartItems = window.localStorage.getItem('cartItems')
+  if (cartItems) {
+    cartItems = JSON.parse(cartItems)
+    cartItems.push(cartItem)
+  } else {
+    cartItems = []
+    cartItems.push(cartItem)
+  }
+  window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
+  document.querySelector('#cartQty').textContent = cartItems.length
 }
 
 function goToCartPage () {

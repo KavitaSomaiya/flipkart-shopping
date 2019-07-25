@@ -2,7 +2,7 @@
 let indexData = [
   {
     indexImgUrl:'./images/mob-1.jpeg',
-    name:'Vivo V15 Pro (Topaz Blue, 128 GB)  (6 GB RAM)',
+    name:'Vivo V15 Pro (Topaz Blue, 128 GB) (6 GB RAM)',
     price:'26,990',
     retailPrice:'32,990',
     discount: 18,
@@ -228,3 +228,9 @@ function toggleHeartClr (e) {
   e.target.classList.toggle('text-danger')
 }
 
+let cartItems = JSON.parse(window.localStorage.getItem('cartItems'))
+if (cartItems.length > 0) {
+  document.querySelector('#cartQty').textContent = cartItems.length
+} else {
+  document.querySelector('#cartQty').textContent = '0'
+}
