@@ -56,15 +56,10 @@ function createCartData () {
 }
 
 function removeItem(n) {
-  debugger;
   var r = confirm('Are you sure you want to remove this item?');
   if (r ==  true) {
     let no = parseInt(n)
-    console.log(no)
-    let num = cartItems.filter(i => i.dataNumber === no)
-    console.log(num)
-    let nIndex = cartItems.indexOf(num)
-    console.log(nIndex)
+    let nIndex = cartItems.findIndex(j => j.dataNumber === no)
     cartItems.splice(nIndex, 1)
     console.log(cartItems)
     window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
