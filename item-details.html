@@ -16,6 +16,7 @@
       @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
     </style>
     <link rel='stylesheet' href='./css/bootstrap.min.css' />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
     <link rel='stylesheet' href='./css/animate.css' />
     <link rel='stylesheet' href='./css/index.css' />
   </head>
@@ -204,7 +205,7 @@
               <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 border-top-bottom'>
                 <div class='d-flex align-items-center'>
                   <div class='col p-0 m-0'>
-                    <button class='btn btn-lg rounded-0 float-left' onclick="addToCart(event);" type='button'>Add to Cart</button>
+                    <button class='btn btn-lg rounded-0 float-left' id='adToCart' onclick="addToCart(event); tempAlert('Item added to Cart.!',1000);" type='button'>Add to Cart</button>
                   </div>
                   <div class='col p-0 m-0'>
                       <button class='btn btn-lg rounded-0 float-right' type='button'>Buy Now</button>

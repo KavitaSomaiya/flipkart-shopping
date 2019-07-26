@@ -1,6 +1,8 @@
 ﻿
 function createCartData () {
+  debugger;
   let cartItems = JSON.parse(window.localStorage.getItem('cartItems'))
+  cartItems = cartItems.filter(Boolean)
   let cartDetail = ''
   cartItems.forEach(c => {
     cartDetail +=
@@ -59,17 +61,9 @@ function removeItem(n) {
   var r = confirm('Are you sure you want to remove this item?');
   if (r ==  true) {
     let no = parseInt(n)
-    let nIndex = cartItems.findIndex(j => j.dataNumber === no)
-    cartItems.splice(nIndex, 1)
-    console.log(cartItems)
+    let nIndex = cartItems.filter(j => j.dataNumber !== no)
+    cartItems = nIndex
     window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
     window.location.href = './cart.html'
   }
 }
-
-//for( var j = 0; j < cartItems.length; j++){ 
-  //if ( cartItems[j] === nIndex) {
-    //cartItems.splice(j, 1)
-    //j--
-  //}
-//}

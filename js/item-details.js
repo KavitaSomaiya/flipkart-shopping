@@ -1,4 +1,10 @@
 
+if (cartItems.length > 0) {
+  document.querySelector('#cartQty').textContent = cartItems.length
+} else {
+  document.querySelector('#cartQty').textContent = '0'
+}
+
 let curItem = JSON.parse(window.localStorage.getItem('curItem'))
 
 function itemDetailBody () {
@@ -99,8 +105,20 @@ function addToCart () {
     cartItems = []
     cartItems.push(cartItem)
   }
-  window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
+  cartItems = cartItems.filter(Boolean)
   document.querySelector('#cartQty').textContent = cartItems.length
+  window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
+}
+
+
+function tempAlert (msg,duration) {
+ var el = document.createElement("div");
+ el.setAttribute("style","position:absolute;top:40%;left:40%;color:black;width: 140px;height: 20px;align-items:center;text-align:center;overflow: hidden;font-size: .875rem;background-color: rgba(255,255,255,.85);background-clip:padding-box;border: 1px solid rgba(0,0,0,.1);box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,.1);-webkit-backdrop-filter: blur(10px);backdrop-filter: blur(10px);border-radius: .25rem;");
+ el.innerHTML = msg;
+ setTimeout(function(){
+  el.parentNode.removeChild(el);
+ },duration);
+ document.body.appendChild(el);
 }
 
 function goToCartPage () {
