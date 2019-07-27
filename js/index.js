@@ -9,7 +9,7 @@ let indexData = [
     dataNumber: 1
   }, {
     indexImgUrl:'./images/mob-2.jpeg',
-    name:'Honor 9N (Robin Egg Blue, 64 GB)  (4 GB RAM)',
+    name:'Honor 9N (Robin Egg Blue, 64 GB) (4 GB RAM)',
     price:'14,500',
     retailPrice:'15833',
     discount: 8,
@@ -226,11 +226,4 @@ function srch () {
 
 function toggleHeartClr (e) {
   e.target.classList.toggle('text-danger')
-}
-
-let cartItems = JSON.parse(window.localStorage.getItem('cartItems'))
-if (cartItems.length > 0) {
-  document.querySelector('#cartQty').textContent = cartItems.length
-} else {
-  document.querySelector('#cartQty').textContent = '0'
 }

@@ -1,6 +1,15 @@
 ﻿
+function totalQty () {
+  let cartItems = JSON.parse(window.localStorage.getItem('cartItems'))
+  cartItems = cartItems.filter(Boolean)
+  if (cartItems.length > 0) {
+    document.querySelector('#cartQty').textContent = cartItems.length
+  } else {
+    document.querySelector('#cartQty').textContent = '0'
+  }
+}
+
 function createCartData () {
-  debugger;
   let cartItems = JSON.parse(window.localStorage.getItem('cartItems'))
   cartItems = cartItems.filter(Boolean)
   let cartDetail = ''
@@ -58,9 +67,12 @@ function createCartData () {
 }
 
 function removeItem(n) {
+  debugger;
   var r = confirm('Are you sure you want to remove this item?');
   if (r ==  true) {
     let no = parseInt(n)
+    let cartItems = JSON.parse(window.localStorage.getItem('cartItems'))
+    cartItems = cartItems.filter(Boolean)
     let nIndex = cartItems.filter(j => j.dataNumber !== no)
     cartItems = nIndex
     window.localStorage.setItem('cartItems', JSON.stringify(cartItems))

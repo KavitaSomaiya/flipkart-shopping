@@ -1,10 +1,4 @@
 
-if (cartItems.length > 0) {
-  document.querySelector('#cartQty').textContent = cartItems.length
-} else {
-  document.querySelector('#cartQty').textContent = '0'
-}
-
 let curItem = JSON.parse(window.localStorage.getItem('curItem'))
 
 function itemDetailBody () {
@@ -22,10 +16,10 @@ function itemDetailBody () {
               <img class alt src='${curItem.indexImgUrl}' />
             </div>
           </div>
-        <div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4' onclick='heartFunc();' type='button'>
+        <div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4' type='button'>
           <div class='rounded-circle shadow-lg mainImgSectionHeart'>
             <i class='fa fa-heart p-3 heartClassFontSize heartClassGray' onclick='toggleHeartColor();' id='like-btn' aria-hidden='true'></i>
-          </div>
+          </div> 
         </div>
       </div>
     `
@@ -96,6 +90,7 @@ function toggleDown (e) {
 }
 
 function addToCart () {
+  debugger;
   let cartItem = curItem
   var cartItems = window.localStorage.getItem('cartItems')
   if (cartItems) {
