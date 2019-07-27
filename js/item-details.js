@@ -19,7 +19,7 @@ function itemDetailBody () {
         <div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4' type='button'>
           <div class='rounded-circle shadow-lg mainImgSectionHeart'>
             <i class='fa fa-heart p-3 heartClassFontSize heartClassGray' onclick='toggleHeartColor();' id='like-btn' aria-hidden='true'></i>
-          </div> 
+          </div>
         </div>
       </div>
     `
