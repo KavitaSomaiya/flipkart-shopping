@@ -90,7 +90,6 @@ function toggleDown (e) {
 }
 
 function addToCart () {
-  debugger;
   let cartItem = curItem
   var cartItems = window.localStorage.getItem('cartItems')
   if (cartItems) {

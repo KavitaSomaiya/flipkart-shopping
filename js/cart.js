@@ -43,7 +43,7 @@ function createCartData () {
                     <span class='discountPer ml-2'>${c.discount}% Discount</span>
                     <div class='offerQty ml-2 d-none d-sm-none d-md-block d-lg-block d-xl-block' id='offerQtyId'>
                       <a>
-                        ${c.offersApplied} Offer Applied
+                        ${c.offersApplied} Offers Applied
                         <i class='' aria-hidden='true'></i>
                       </a> 
                     </div>                                            

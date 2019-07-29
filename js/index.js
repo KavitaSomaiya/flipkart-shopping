@@ -189,8 +189,8 @@ createIndexImg = () => {
                 <div class='col-2 col-sm-2 col-md-1 col-lg-1 col-xl-1 px-1 heartClassSection bg-white'  type='button'>
                   <div class='row no-gutters justify-content-center align-items-center'>
                     <div class='mainImgSectionHeart w-50 text-center'>
-                      <i onclick='toggleHeartClr(event);' class='heartClassFontSize heartClassGray heartClass fa fa-heart p-2 p-sm-2 p-md-2 py-lg-3 px-lg-2 py-xl-4 px-xl-1' aria-hidden='true'></i>
-                    </div> 
+                      <i onclick='toggleAndAddToWishList("${item.dataNumber}", event);' class='heartClassFontSize heartClassGray heartClass fa fa-heart p-2 p-sm-2 p-md-2 py-lg-3 px-lg-2 py-xl-4 px-xl-1' aria-hidden='true'></i>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -215,15 +215,44 @@ function goToIndexPage () {
   window.focus()
 }
 
-function goToWishList () {
-  window.open('./wish-list.html','_self','scrollbars=yes,menubar=yes');
-  window.focus()
-}
-
 function srch () {
   document.querySelector('#searchId').classList.toggle('d-block')
 }
 
-function toggleHeartClr (e) {
-  e.target.classList.toggle('text-danger')
+
+//function toggleHeartClr (e) {
+  //e.target.classList.toggle('text-danger')
+//}
+
+
+function toggleAndAddToWishList (it, e) {
+  debugger;
+  let wishItem = JSON.parse(window.localStorage.getItem('curWishItem'))
+  let wishItems = window.localStorage.getItem('wishItems')
+  if (e.target.classList.contains('text-danger')) {
+    if (wishItems.length === 0) {
+      let wishItem = parseInt(it)
+      let curWishItem = indexData.filter(i => i.dataNumber === wishItem)
+      window.localStorage.setItem('curWishItem', JSON.stringify(curWishItem[0]))
+      window.localStorage.setItem('wishItems', JSON.stringify(wishItems))
+      wishItems = []
+      wishItems.push(wishItem)
+      window.localStorage.setItem('wishItems', JSON.stringify(wishItems))
+    } else if (wishItems.length > 0) {
+      wishItem = JSON.parse(window.localStorage.getItem('curWishItem'))
+      wishItem = curWishItem
+      wishItems = JSON.parse(wishItems)
+      wishItems.push(wishItem)
+    }
+  } else if (e.target.classList.contains('heartClassGray')) {
+    let wishItem = parseInt(it)
+    let wishItems = JSON.parse(window.localStorage.getItem('wishItems'))
+    let nIndex = wishItems.filter(j => j.dataNumber !== it)
+    wishItems = nIndex
+  }
+  window.localStorage.setItem('wishItems', JSON.stringify(wishItems))
+}
+
+function goToWishList () {
+  window.open('./wish-list.html','_self','scrollbars=yes,menubar=yes')
 }
