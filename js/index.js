@@ -222,7 +222,7 @@ function srch () {
 
 function toggleAndAddToWishList (it, e) {
   debugger;
-  if (e.target.classList.contains('heartClassGray')) {}
+  if (e.target.classList.contains('heartClassGray')) {
     let itm = parseInt(it)
     let curWishItem = indexData.filter(i => i.dataNumber === itm)
     console.log(curWishItem)
@@ -244,7 +244,8 @@ function toggleAndAddToWishList (it, e) {
       window.localStorage.setItem('wishItems', JSON.stringify(wishItems))
       e.target.classList.remove('heartClassgray')
       e.target.classList.add('text-danger')
-    } else if (e.target.classList.contains('text-danger')) {
+    }
+  } else if (e.target.classList.contains('text-danger')) {
       let no = parseInt(it)
       let wishItems = JSON.parse(window.localStorage.getItem('wishItems'))
       wishItems = cartItems.filter(wishItems)
