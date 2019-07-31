@@ -1,4 +1,5 @@
 
+
 let indexData = [
   {
     indexImgUrl:'./images/mob-1.jpeg',
@@ -221,26 +222,43 @@ function srch () {
 
 function toggleAndAddToWishList (it, e) {
   debugger;
-  let itm = parseInt(it)
-  let curWishItem = indexData.filter(i => i.dataNumber === itm)
-  console.log(curWishItem)
-  window.localStorage.setItem('curWishItem', JSON.stringify(curWishItem[0]))
-  curWishItem = JSON.parse(window.localStorage.getItem('curWishItem'))
-  console.log(curWishItem)
-  var wishItems = window.localStorage.getItem('wishItems')
-  if (wishItems.length == 0) {
-    let wishItems = []
-    wishItems.push(curWishItem)
-    e.target.classList.remove('heartClassgray')
-    e.target.classList.add('text-danger')
-  } else if (wishItems.length > 0) {
-    wishItems = JSON.parse(wishItems)
-    wishItems.push(curWishItem)
-    e.target.classList.remove('heartClassgray')
-    e.target.classList.add('text-danger')
-  }
-  wishItems = wishItems.filter(Boolean)
-  window.localStorage.setItem('wishItems', JSON.stringify(wishItems))
+  if (e.target.classList.contains('heartClassGray')) {}
+    let itm = parseInt(it)
+    let curWishItem = indexData.filter(i => i.dataNumber === itm)
+    console.log(curWishItem)
+    window.localStorage.setItem('curWishItem', JSON.stringify(curWishItem[0]))
+    curWishItem = JSON.parse(window.localStorage.getItem('curWishItem'))
+    console.log(curWishItem)
+    var wishItems = window.localStorage.getItem('wishItems')
+    if (!wishItems) {
+      let wishItems = []
+      wishItems.push(curWishItem)
+      wishItems = wishItems.filter(Boolean)
+      window.localStorage.setItem('wishItems', JSON.stringify(wishItems))
+      e.target.classList.remove('heartClassgray')
+      e.target.classList.add('text-danger')
+    } else if (wishItems.length > 0) {
+      wishItems = JSON.parse(wishItems)
+      wishItems.push(curWishItem)
+      wishItems = wishItems.filter(Boolean)
+      window.localStorage.setItem('wishItems', JSON.stringify(wishItems))
+      e.target.classList.remove('heartClassgray')
+      e.target.classList.add('text-danger')
+    } else if (e.target.classList.contains('text-danger')) {
+      let no = parseInt(it)
+      let wishItems = JSON.parse(window.localStorage.getItem('wishItems'))
+      wishItems = cartItems.filter(wishItems)
+      let nIndex = wishItems.filter(j => j.dataNumber !== no)
+      wishItems = nIndex
+      window.localStorage.setItem('wishItems', JSON.stringify(wishItems))
+      e.target.classList.remove('text-danger')
+      e.target.classList.add('heartClassgray')
+    }
+}
+
+function wishList () {
+  let wishItems = JSON.parse(window.localStorage.getItem('wishItems'))
+  console.log(wishItems)
 }
 
 
