@@ -225,33 +225,7 @@ function srch () {
 //}
 
 
-function toggleAndAddToWishList (it, e) {
-  debugger;
-  let wishItem = JSON.parse(window.localStorage.getItem('curWishItem'))
-  let wishItems = window.localStorage.getItem('wishItems')
-  if (e.target.classList.contains('text-danger')) {
-    if (wishItems.length === 0) {
-      let wishItem = parseInt(it)
-      let curWishItem = indexData.filter(i => i.dataNumber === wishItem)
-      window.localStorage.setItem('curWishItem', JSON.stringify(curWishItem[0]))
-      window.localStorage.setItem('wishItems', JSON.stringify(wishItems))
-      wishItems = []
-      wishItems.push(wishItem)
-      window.localStorage.setItem('wishItems', JSON.stringify(wishItems))
-    } else if (wishItems.length > 0) {
-      wishItem = JSON.parse(window.localStorage.getItem('curWishItem'))
-      wishItem = curWishItem
-      wishItems = JSON.parse(wishItems)
-      wishItems.push(wishItem)
-    }
-  } else if (e.target.classList.contains('heartClassGray')) {
-    let wishItem = parseInt(it)
-    let wishItems = JSON.parse(window.localStorage.getItem('wishItems'))
-    let nIndex = wishItems.filter(j => j.dataNumber !== it)
-    wishItems = nIndex
-  }
-  window.localStorage.setItem('wishItems', JSON.stringify(wishItems))
-}
+
 
 function goToWishList () {
   window.open('./wish-list.html','_self','scrollbars=yes,menubar=yes')
