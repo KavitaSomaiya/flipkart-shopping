@@ -225,15 +225,17 @@ function toggleAndAddToWishList (it, e) {
   let curWishItem = indexData.filter(i => i.dataNumber === itm)
   console.log(curWishItem)
   window.localStorage.setItem('curWishItem', JSON.stringify(curWishItem[0]))
+  curWishItem = JSON.parse(window.localStorage.getItem('curWishItem'))
+  console.log(curWishItem)
   var wishItems = window.localStorage.getItem('wishItems')
   if (wishItems.length == 0) {
     let wishItems = []
     wishItems.push(curWishItem)
     e.target.classList.remove('heartClassgray')
     e.target.classList.add('text-danger')
-  } else {
+  } else if (wishItems.length > 0) {
     wishItems = JSON.parse(wishItems)
-    wishItems.push(curWishItem[0])
+    wishItems.push(curWishItem)
     e.target.classList.remove('heartClassgray')
     e.target.classList.add('text-danger')
   }
