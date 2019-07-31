@@ -219,6 +219,28 @@ function srch () {
   document.querySelector('#searchId').classList.toggle('d-block')
 }
 
+function toggleAndAddToWishList (it, e) {
+  debugger;
+  let itm = parseInt(it)
+  let curWishItem = indexData.filter(i => i.dataNumber === itm)
+  console.log(curWishItem)
+  window.localStorage.setItem('curWishItem', JSON.stringify(curWishItem[0]))
+  var wishItems = window.localStorage.getItem('wishItems')
+  if (wishItems.length == 0) {
+    let wishItems = []
+    wishItems.push(curWishItem)
+    e.target.classList.remove('heartClassgray')
+    e.target.classList.add('text-danger')
+  } else {
+    wishItems = JSON.parse(wishItems)
+    wishItems.push(curWishItem[0])
+    e.target.classList.remove('heartClassgray')
+    e.target.classList.add('text-danger')
+  }
+  wishItems = wishItems.filter(Boolean)
+  window.localStorage.setItem('wishItems', JSON.stringify(wishItems))
+}
+
 
 //function toggleHeartClr (e) {
   //e.target.classList.toggle('text-danger')
