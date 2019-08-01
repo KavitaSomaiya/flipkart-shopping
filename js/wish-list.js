@@ -1,8 +1,7 @@
 
-
-let wishItems = JSON.parse(window.localStorage.getItem('wishItems'))
-
 function createWishListData () {
+  let wishItems = JSON.parse(window.localStorage.getItem('wishItems'))
+  debugger;
   let wishListDetail = ''
   wishItems.forEach(w => {
     wishListDetail +=
@@ -39,16 +38,24 @@ function createWishListData () {
                 <i class='fas fa-trash-alt' onclick='removeWishListItem("${w.dataNumber}");' aria-hidden='true'></i>
               </p>                      
             </div>                  
-          </div>                      
-          <nav class='navbar navbar-expand-sm bg-white navbar-dark cart-sticky-bottom'>
-           <a class='bg-white btn btn-link shadow py-3 mt-3 mt-sm-3 mt-md-0 mt-lg-0 mt-xl-0 mr-1 mr-sm-4' href='#'>
-             <span class='mr-2'> < </span>
-               Continue Shopping
-            </a>
-            <button class='btn btn-link shadow-lg py-3 mt-3 mt-sm-3 mt-md-0 mt-lg-0 mt-xl-0 ml-0 ml-sm-4 ml-md-4 ml-lg-5 ml-xl-5' type='button' tabindex='20'>Place Order</button>
-          </nav>
+          </div>
         </li>
       `
     })
+    document.querySelector('#totalItemInWishList').textContent = `My Wish List (${wishItems.length})`
     document.querySelector('#myWishList').innerHTML = wishListDetail
+  }
+
+  function removeWishListItem (d) {
+    debugger;
+    var r = confirm('Are you sure you want to remove this item?');
+    if (r ==  true) {
+      let no = parseInt(d)
+      let wishItems = JSON.parse(window.localStorage.getItem('wishItems'))
+      wishItems = wishItems.filter(Boolean)
+      let nIndex = wishItems.filter(j => j.dataNumber !== no)
+      wishItems = nIndex
+      window.localStorage.setItem('wishItems', JSON.stringify(wishItems))
+      window.location.href = './wish-list.html'
+    }
   }
