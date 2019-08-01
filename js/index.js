@@ -141,12 +141,18 @@ let indexData = [
     discount: 80,
     dataNumber: 20
   }
-],
-indexDetails =''
+]
+window.localStorage.setItem('indexData', JSON.stringify(indexData))
+console.log(indexData)
+
+
 createIndexImg = () => {
+  let indexData = JSON.parse(window.localStorage.getItem('indexData'))
+  console.log(indexData)
+  let indexDetails =''
   indexData.forEach(item => {
     const id = item.dataNumber
-    indexDetails +=      
+      indexDetails +=      
       `
         <li class='heartLiClass'>
           <section class='sortFilterSection m-0 p-0 cust-ouline-0 w-100 mw-100 backHtmlImgList'>
@@ -188,8 +194,8 @@ createIndexImg = () => {
                 </div>
                 <div class='col-2 col-sm-2 col-md-1 col-lg-1 col-xl-1 px-1 heartClassSection bg-white'  type='button'>
                   <div class='row no-gutters justify-content-center align-items-center'>
-                    <div class='mainImgSectionHeart w-50 text-center' id='onLoadWishList'>
-                      <i onclick='toggleAndAddToWishList("${item.dataNumber}", event);' class='heartClassFontSize heartClassGray heartClass fa fa-heart p-2 p-sm-2 p-md-2 py-lg-3 px-lg-2 py-xl-4 px-xl-1' aria-hidden='true'></i>
+                    <div class='mainImgSectionHeart w-50 text-center'>
+                      <i id="w-'${item.dataNumber}'" onclick='toggleAndAddToWishList("${item.dataNumber}", event);' class='heartClassFontSize heartClassGray heartClass fa fa-heart p-2 p-sm-2 p-md-2 py-lg-3 px-lg-2 py-xl-4 px-xl-1' aria-hidden='true'></i>
                     </div>
                   </div>
                 </div>
@@ -198,7 +204,7 @@ createIndexImg = () => {
           </section>
         </li>
       `
-    });
+    })
   document.querySelector('#indexImgId').innerHTML = indexDetails
 }
 
@@ -254,8 +260,26 @@ function toggleAndAddToWishList (it, e) {
     window.localStorage.setItem('wishItems', JSON.stringify(wishItems))
 }
 
+function wishList () {
+  debugger;
+  let wishItems = JSON.parse(window.localStorage.getItem('wishItems'))
+  console.log(wishItems)
+  if (wishItems.length > 0) {
+    document.querySelector('.heartClass').classList.remove('heartClassGray')
+    document.querySelector('.heartClass').classList.add('text-danger')
+  }
+}
 
-
+    
+//function wishList () {
+  //debugger;
+  //let wishItems = JSON.parse(window.localStorage.getItem('wishItems'))
+  //console.log(wishItems)
+  //if (wishItems.length > 0) {
+//    document.querySelector('.heartClass').classList.remove('heartClassGray')
+  //  document.querySelector('.heartClass').classList.add('text-danger')
+  //}
+//}
 
 //function toggleHeartClr (e) {
   //e.target.classList.toggle('text-danger')
